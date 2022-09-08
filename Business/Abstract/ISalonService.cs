@@ -10,5 +10,11 @@ namespace Business.Abstract
     public interface ISalonService
     {
         List<Salon> list();
+       
+        void addBL(Salon salon);
+
+        Salon getById(int id);
+        void update(Salon salon);
+        void DeleteBL(Salon salon);
     }
 }
