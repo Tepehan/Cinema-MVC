@@ -148,6 +148,7 @@
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\FilmController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SalonController.cs" />
     <Compile Include="Controllers\SalonFilmController.cs" />
     <Compile Include="Controllers\TurController.cs" />
     <Compile Include="Global.asax.cs">
@@ -2344,6 +2345,9 @@
     <Content Include="Views\SalonFilm\updateSalonFilm.cshtml" />
     <Content Include="Views\Admin\login.cshtml" />
     <Content Include="Views\Error\Error401.cshtml" />
+    <Content Include="Views\Salon\AddSalon.cshtml" />
+    <Content Include="Views\Salon\Index.cshtml" />
+    <Content Include="Views\Salon\updateSalon.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
