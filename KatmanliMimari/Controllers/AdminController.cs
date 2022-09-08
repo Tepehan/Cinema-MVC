@@ -23,7 +23,9 @@ namespace KatmanliMimari.Controllers
             Context c = new Context();
             var sonuc=c.adminler.FirstOrDefault(x => x.kullaniciAd == admin.kullaniciAd && x.sifre == admin.sifre);
             if (sonuc != null) {
+                //set the logined admin toAuthCookie
                 FormsAuthentication.SetAuthCookie(sonuc.kullaniciAd,false);
+                //intiating the session with needed values
                 Session["adminAdi"] = sonuc.adminAdi;
                 Session["adminSoyadi"] = sonuc.adminSoyadi;
                 Session["kullaniciAd"] = sonuc.kullaniciAd;
