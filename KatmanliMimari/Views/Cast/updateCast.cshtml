@@ -1,0 +1,58 @@
+﻿@using Entity.Concrete
+@model CastKadro
+@{
+    ViewBag.Title = "updateCast";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+
+<h2>Cast Guncelle</h2>
+
+@using (Html.BeginForm("updateCast", "Cast", FormMethod.Post, new
+{ @class = "form-group" }))
+{
+    @Html.HiddenFor(x => x.castKadroId)
+    @Html.Label("Unvan")
+    <br />
+    @Html.TextBoxFor(x => x.unvan, new { @class = "form-control" })
+    <div id="unvan" class="validation-container">
+        <!-- @Html.ValidationMessageFor(x => x.unvan)-->
+    </div>
+
+    <br />
+    @Html.Label("Ad")
+    <br />
+    @Html.TextBoxFor(x => x.ad, new { @class = "form-control" })
+    <div id="ad" class="validation-container">
+        <!-- @Html.ValidationMessageFor(x => x.ad)-->
+    </div>
+
+    <br />
+    @Html.Label("Soyad")
+    <br />
+    @Html.TextBoxFor(x => x.soyad, new { @class = "form-control" })
+    <div id="soyad" class="validation-container">
+        <!-- @Html.ValidationMessageFor(x => x.soyad)-->
+    </div>
+
+    <br />
+    @Html.Label("Acıklama")
+    <br />
+    @Html.TextBoxFor(x => x.aciklama, new { @class = "form-control" })
+    <div id="aciklama" class="validation-container">
+        <!-- @Html.ValidationMessageFor(x => x.aciklama)-->
+    </div>
+
+    <br />
+    @Html.Label("Durum")
+    <br />
+    @Html.TextBoxFor(x => x.durum, new { @class = "form-control" })
+    <div id="durum" class="validation-container">
+        <!-- @Html.ValidationMessageFor(x => x.durum)-->
+    </div>
+
+    <br />
+
+
+    <input type="submit" value="Güncelle" class="form-control bg-fuchsia mt-5" />
+}
