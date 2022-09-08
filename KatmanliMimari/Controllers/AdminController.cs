@@ -30,7 +30,7 @@ namespace KatmanliMimari.Controllers
                 Session["adminSoyadi"] = sonuc.adminSoyadi;
                 Session["kullaniciAd"] = sonuc.kullaniciAd;
                
-                return RedirectToAction("Index","Home");
+                return RedirectToAction("list","Film");
             }
             else{
                 return RedirectToAction("login");
