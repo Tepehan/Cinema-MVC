@@ -50,10 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\ICastService.cs" />
     <Compile Include="Abstract\IFilmService.cs" />
     <Compile Include="Abstract\ISalonFilmService.cs" />
     <Compile Include="Abstract\ISalonService.cs" />
     <Compile Include="Abstract\ITurService.cs" />
+    <Compile Include="Concrete\CastManager.cs" />
     <Compile Include="Concrete\FilmManagerBL.cs" />
     <Compile Include="Concrete\SalonFilmManager.cs" />
     <Compile Include="Concrete\SalonManager.cs" />
