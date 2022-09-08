@@ -46,6 +46,7 @@ namespace KatmanliMimari.Controllers {
             sf.durum = false;
             sfm.update(sf);
             return RedirectToAction("Index");
+
         }
         [HttpGet]
         public ActionResult updateSalonFilm(int id) {
