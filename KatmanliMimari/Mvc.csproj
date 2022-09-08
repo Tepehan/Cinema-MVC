@@ -145,6 +145,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\CastController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\FilmController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -2344,6 +2345,9 @@
     <Content Include="Views\SalonFilm\updateSalonFilm.cshtml" />
     <Content Include="Views\Admin\login.cshtml" />
     <Content Include="Views\Error\Error401.cshtml" />
+    <Content Include="Views\Cast\AddCast.cshtml" />
+    <Content Include="Views\Cast\Index.cshtml" />
+    <Content Include="Views\Cast\updateCast.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
