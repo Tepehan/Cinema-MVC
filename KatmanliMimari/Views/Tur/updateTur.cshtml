@@ -1,0 +1,30 @@
+﻿@using Entity.Concrete
+@model Tur
+@{
+    ViewBag.Title = "updateTur";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>Tür Güncelle</h2>
+@using (Html.BeginForm("updateTur", "Tur", FormMethod.Post, new
+{ @class = "form-group" }))
+{   @Html.HiddenFor(x => x.turId);
+    @Html.Label("Tür Adı")
+    <br />
+    @Html.TextBoxFor(x => x.turIsim, new { @class = "form-control" })
+    <div id="turIsim" class="validation-container">
+        <!-- @Html.ValidationMessageFor(x => x.turIsim)-->
+    </div>
+
+    <br />
+    @Html.Label("Durum")
+    <br />
+    @Html.TextBoxFor(x => x.durum, new { @class = "form-control" })
+    <div id="durum" class="validation-container">
+        <!-- @Html.ValidationMessageFor(x => x.durum)-->
+    </div>
+    <br />
+
+    <input type="submit" value="Ekle" class="form-control bg-fuchsia mt-5" />
+}
+

@@ -1,0 +1,88 @@
+﻿@using Entity.Concrete
+@model Film
+
+@{
+    ViewBag.Title = "updateFilm";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<h2>Film Güncelle</h2>
+@using (Html.BeginForm("updateFilm", "Film", FormMethod.Post, new
+{ @class = "form-group" }))
+{
+    @Html.HiddenFor(x => x.filmId)
+    @Html.Label("Film Adı")
+    <br />
+    @Html.TextBoxFor(x => x.filmIsim, new { @class = "form-control" })
+    <div id="filmIsim" class="validation-container">
+        @Html.ValidationMessageFor(x => x.filmIsim)
+    </div>
+
+    <br />
+    @Html.Label("Özet")
+    <br />
+    @Html.TextAreaFor(x => x.ozet, new { @class = "form-control" })
+    <div id="ozet" class="validation-container">
+        @Html.ValidationMessageFor(x => x.ozet)
+    </div>
+    <br />
+    @Html.Label("Dil")
+    <br />
+    @Html.TextBoxFor(x => x.dil, new { @class = "form-control" })
+    <div id="dil" class="validation-container">
+        @Html.ValidationMessageFor(x => x.dil)
+    </div>
+    <br />
+    @Html.Label("Süre")
+    <br />
+    @Html.TextBoxFor(x => x.sure, new { @class = "form-control" })
+    <div id="sure" class="validation-container">
+        @Html.ValidationMessageFor(x => x.sure)
+    </div>
+    <br />
+    @Html.Label("Vizyon Tarihi")
+    <br />
+    <input type="date" name="vizyonTarihi" class="form-control m-1" onfocus="document.getElementById('date').style.display='none'" />
+    <div id="ozet" class="validation-container">
+        @Html.ValidationMessageFor(x => x.vizyonTarihi)
+    </div>
+    <br />
+    @Html.Label("Desteklediği Teknojiler")
+    <br />
+    @Html.TextBoxFor(x => x.destekledigiTeknolojiler, new { @class = "form-control" })
+    <div id="ozet" class="validation-container">
+        @Html.ValidationMessageFor(x => x.destekledigiTeknolojiler)
+    </div>
+    <br />
+    @Html.Label("Bütçe")
+    <br />
+    @Html.TextBoxFor(x => x.butce, new { @class = "form-control" })
+    <div id="ozet" class="validation-container">
+        @Html.ValidationMessageFor(x => x.butce)
+    </div>
+    <br />
+    @Html.Label("Afiş Resmi")
+    <br />
+    @Html.TextBoxFor(x => x.afisUrl, new { @class = "form-control" })
+    <div id="ozet" class="validation-container">
+        @Html.ValidationMessageFor(x => x.afisUrl)
+    </div>
+    <br />
+    @Html.Label("Tür")
+    <br />
+    @Html.DropDownListFor(x=>x.turId, (List<SelectListItem>)ViewBag.tur, new { @class = "form-control" })
+    <div id="turId" class="validation-container">
+        @Html.ValidationMessageFor(x => x.turId)
+    </div>
+    @Html.Label("Durum")
+    <br />
+    @Html.TextBoxFor(x => x.durum, new { @class = "form-control" })
+    <div id="durum" class="validation-container">
+        @Html.ValidationMessageFor(x => x.durum)
+    </div>
+    <br />
+
+
+    <br />
+    <input type="submit" value="Güncelle" class="form-control bg-fuchsia mt-5" />
+}
+

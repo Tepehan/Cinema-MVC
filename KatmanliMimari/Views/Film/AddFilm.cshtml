@@ -1,0 +1,160 @@
+﻿@using Entity.Concrete
+@model Film
+
+@{
+    /**/
+
+    /**/
+
+    ViewBag.Title = "AddFilm";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<link href="~/Admin/css/style2.css" rel="stylesheet" />
+<h2>Film Ekle</h2>
+@using (Html.BeginForm("AddFilm", "Film", FormMethod.Post, new
+{ @class = "form-group" }))
+{
+    @Html.Label("Film Adı")
+    <br />
+    @Html.TextBoxFor(x => x.filmIsim, new { @class = "form-control" })
+    <div id="filmIsim" class="validation-container">
+        @Html.ValidationMessageFor(x => x.filmIsim)
+    </div>
+
+    <br />
+    @Html.Label("Özet")
+    <br />
+    @Html.TextAreaFor(x => x.ozet, new { @class = "form-control" })
+    <div id="ozet" class="validation-container">
+        @Html.ValidationMessageFor(x => x.ozet)
+    </div>
+    <br />
+    @Html.Label("Dil")
+    <br />
+    @Html.TextBoxFor(x => x.dil, new { @class = "form-control" })
+    <div id="dil" class="validation-container">
+        @Html.ValidationMessageFor(x => x.dil)
+    </div>
+    <br />
+    @Html.Label("Süre")
+    <br />
+    @Html.TextBoxFor(x => x.sure, new { @class = "form-control" })
+    <div id="sure" class="validation-container">
+        @Html.ValidationMessageFor(x => x.sure)
+    </div>
+    <br />
+    @Html.Label("Vizyon Tarihi")
+    <br />
+    <input type="date" name="vizyonTarihi" class="form-control m-1" onfocus="document.getElementById('date').style.display='none'" />
+    <div id="ozet" class="validation-container">
+        @Html.ValidationMessageFor(x => x.vizyonTarihi)
+    </div>
+    <br />
+    @Html.Label("Desteklediği Teknojiler")
+    <br />
+    @Html.TextBoxFor(x => x.destekledigiTeknolojiler, new { @class = "form-control" })
+    <div id="ozet" class="validation-container">
+        @Html.ValidationMessageFor(x => x.destekledigiTeknolojiler)
+    </div>
+    <br />
+    @Html.Label("Bütçe")
+    <br />
+    @Html.TextBoxFor(x => x.butce, new { @class = "form-control" })
+    <div id="ozet" class="validation-container">
+        @Html.ValidationMessageFor(x => x.butce)
+    </div>
+    <br />
+    @Html.Label("Afiş Resmi")
+    <br />
+    @Html.TextBoxFor(x => x.afisUrl, new { @class = "form-control" })
+    <div id="ozet" class="validation-container">
+        @Html.ValidationMessageFor(x => x.afisUrl)
+    </div>
+    <br />
+    @Html.Label("Tür")
+    <br />
+
+    @Html.DropDownList("turId", (List<SelectListItem>)ViewBag.tur, new { @class = "form-control" })
+
+    <br />
+    @Html.Label("Durum")
+    <br />
+    @Html.TextBoxFor(x => x.durum, new { @class = "form-control" })
+    <div id="durum" class="validation-container">
+        @Html.ValidationMessageFor(x => x.durum)
+    </div>
+    <input type="submit" value="Ekle" class="form-control bg-fuchsia mt-5" />
+}
+
+
+
+@*<form class="form-group m-2" method="post">
+        <h4>Film Adı</h4>
+        <input type="text" name="filmIsim" class="form-control m-1" onfocus="document.getElementById('filmAdi').style.display='none'" />
+        <div id="filmAdi" class="validation-container"> @Html.ValidationMessage("filmIsim")</div>
+
+        <h4>Özet</h4>
+        <input type="text" name="ozet" class="form-control m-1" onfocus="document.getElementById('ozet').style.display='none'" />
+        <div id="ozet" class="validation-container">
+            @Html.ValidationMessage("ozet")
+        </div>
+        <h4>Dil</h4>
+        <input type="text" name="dil" class="form-control m-1" onfocus="document.getElementById('dil').style.display='none'" />
+        <div class="validation-container" id="dil">
+            @Html.ValidationMessage("dil")
+        </div>
+        <h4>Süre</h4>
+        <input type="text" name="sure" class="form-control m-1" onfocus="document.getElementById('sure').style.display='none'" />
+        <div class="validation-container" id="sure">
+            @Html.ValidationMessage("sure")
+        </div>
+        <h4> Vizyon Tarihi</h4>
+        <input type="date" name="vizyonTarihi" class="form-control m-1" onfocus="document.getElementById('date').style.display='none'" />
+        <div class="validation-container" id="date">
+            @Html.ValidationMessage("vizyonTarihi")
+        </div>
+        <h4>Desteklenen Teknolojiler(örn1,örn2,..)</h4>
+        <input type="text" name="destekledigiTeknolojiler" class="form-control m-1 " onfocus="document.getElementById('destek').style.display='none'"/>
+        <div class="validation-container" id="destek">
+            @Html.ValidationMessage("destekledigiTeknolojiler")
+        </div>
+        <h4> Bütçe</h4>
+        <input type="text" name="butce" class="form-control m-1" onfocus="document.getElementById('butce').style.display='none'" />
+        <div class="validation-container" id="butce">@Html.ValidationMessage("butce")</div>
+        <h4>Afiş Resmi Yükle</h4>
+        <input type="file" name="afisUrl" class="form-control  m-1" onfocus="document.getElementById('afis').style.display='none'" />
+        <div class="validation-container" id="afis">@Html.ValidationMessage("afisUrl")</div>
+        <h4>Tür</h4>
+        @*<input type="text" name="turId" class="form-control m-1" onfocus="document.getElementById('tur').style.display='none'" />
+        <select name="turId" class="form-select  h-100 w-100">
+            @foreach (var item in Model)
+            {
+
+                <option value=@item.turId>@item.turIsim</option>
+
+            }
+
+
+        </select>
+
+        <h4>Film Durumu</h4>
+        <input type="text" name="durum" class="form-control m-1" onfocus="document.getElementById('durum').style.display='none'" />
+        <div class="validation-container" id="durum">
+            @Html.ValidationMessage("durum")
+        </div>
+
+        <input type="submit" value="Ekle" class="form-control bg-fuchsia mt-5" />
+
+    </form> <br />*@
+<script>
+    $(document).ready(function () {
+        $("#vizyonTarih").datepicker({ dateFormat: 'dd/mm/yy' });
+    });
+    function hide() {
+        var validation = document.getElementsByClassName("validation-container");
+
+        validation[0].style.color = black;
+    }
+</script>
+

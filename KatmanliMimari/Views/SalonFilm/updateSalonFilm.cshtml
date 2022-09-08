@@ -1,0 +1,51 @@
+﻿
+@using Entity.Concrete.Modals
+@model SalonFilmModal
+
+@{
+    ViewBag.Title = "updateSalonFilm";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>updateSalonFilm</h2>
+
+
+@using (Html.BeginForm("updateSalonFilm", "SalonFilm", FormMethod.Post, new
+{ @class = "form-group" }))
+{
+    @Html.Hidden("salonFilmlerId", @Model.salonFilmModal.salonFilmlerId);
+    @Html.Label("Gösterim Saati")
+    <br />
+    @Html.TextBox("gosterimSaat", @Model.salonFilmModal.gosterimSaat, new { @class = "form-control" })
+    <div id="gosterimSaat" class="validation-container">
+    </div>
+    <br />
+    @Html.Label("Salon Seç")
+    <br />
+    <select name="salonId" class="form-control">
+        @foreach (var salon in Model.salonModal)
+        {
+            <option value=@salon.salonId>@salon.salonAd</option>
+        }
+
+    </select>
+    <br />
+    @Html.Label("Film Seç")
+    <br />
+    <select name="filmId" class="form-control">
+        @foreach (var film in Model.filmModal)
+        {
+            <option value=@film.filmId>@film.filmIsim</option>
+        }
+
+    </select>
+    <br />
+    @Html.Label("Durum")
+    <br />
+    <select name="durum" class="form-control">
+        <option value=true>True</option>
+        <option value=false>False</option>
+    </select>
+
+    <input type="submit" value="Güncelle" class="form-control bg-fuchsia mt-5" />
+}
