@@ -12,6 +12,7 @@ namespace KatmanliMimari.Controllers {
     [Authorize(Roles = "Admin")]
     public class SalonFilmController : Controller
     {
+        //Gerekli sınıfları türetiyoruz.
         SalonFilmManager sfm = new SalonFilmManager(new EfSalonFilmDal());
         FilmManagerBL fm = new FilmManagerBL(new EfFilmDal());
         SalonManager sm = new SalonManager(new EfSalonDal());
