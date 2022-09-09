@@ -1,5 +1,7 @@
-﻿@using Entity.Concrete
-@model List<CastKadro>
+﻿@using PagedList;
+@using PagedList.Mvc;
+@using Entity.Concrete
+@model IEnumerable<CastKadro>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/AdminLayout.cshtml";
@@ -29,12 +31,7 @@
         </div><!-- /.row -->
     </div><!-- /.container-fluid -->
 </div>
-@if (Model.Count == 0)
-{
-    <p>Liste Boş</p>
-}
-else
-{
+
 
     <table class="table table-hover">
         <tr>
@@ -69,16 +66,19 @@ else
                 <td><a href="~/Cast/updateCast/@item.castKadroId" class="btn btn-primary text-white">Güncelle</a></td>
             </tr>
 
-
-
         }
+
+
     </table>
-}
+
 
 
 <div class="text-center">
     <a href="~/Cast/AddCast" class="btn btn-info"> Yeni Cast Ekle</a>
 </div>
+
+
+@Html.PagedListPager((IPagedList)Model, pageNumber => Url.Action("Index", new { pageNumber }), new PagedListRenderOptions { LiElementClasses = new List<string> { "page-link" } })
 
 
 <div class="modal fade" id="silModal" tabindex="-1" aria-labelledby="silLabel" aria-hidden="false">
