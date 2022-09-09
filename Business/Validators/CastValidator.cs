@@ -13,6 +13,7 @@ namespace Business.Validators
         public CastValidator()
         {
             RuleFor(c => c.unvan).MaximumLength(20).WithMessage("Maximum 20 karakter olabılır");
+            RuleFor(c => c.unvan).NotEmpty().WithMessage("Unvan adı bos gecılemez.");
             RuleFor(c => c.ad).MaximumLength(20).WithMessage("Maximum 20 karakter olabılır");
             RuleFor(c => c.soyad).MaximumLength(20).WithMessage("Maximum 20 karakter olabılır");
             RuleFor(c => c.aciklama).MaximumLength(61).WithMessage("Maximum 61 karakter olabılır");
