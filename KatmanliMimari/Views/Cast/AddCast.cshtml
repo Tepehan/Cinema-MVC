@@ -14,7 +14,7 @@
     <br />
     @Html.TextBoxFor(x => x.unvan, new { @class = "form-control" })
     <div id="unvan" class="validation-container">
-        <!-- @Html.ValidationMessageFor(x => x.unvan)-->
+        @Html.ValidationMessageFor(x => x.unvan)
     </div>
 
     <br />
@@ -22,7 +22,7 @@
     <br />
     @Html.TextBoxFor(x => x.ad, new { @class = "form-control" })
     <div id="ad" class="validation-container">
-        <!-- @Html.ValidationMessageFor(x => x.ad)-->
+        @Html.ValidationMessageFor(x => x.ad)
     </div>
 
     <br />
@@ -30,7 +30,7 @@
     <br />
     @Html.TextBoxFor(x => x.soyad, new { @class = "form-control" })
     <div id="soyad" class="validation-container">
-        <!-- @Html.ValidationMessageFor(x => x.soyad)-->
+        @Html.ValidationMessageFor(x => x.soyad)
     </div>
 
     <br />
@@ -38,16 +38,17 @@
     <br />
     @Html.TextBoxFor(x => x.aciklama, new { @class = "form-control" })
     <div id="aciklama" class="validation-container">
-        <!-- @Html.ValidationMessageFor(x => x.aciklama)-->
+        @Html.ValidationMessageFor(x => x.aciklama)
     </div>
 
     <br />
     @Html.Label("Durum")
     <br />
-    @Html.TextBoxFor(x => x.durum, new { @class = "form-control" })
-    <div id="durum" class="validation-container">
-        <!-- @Html.ValidationMessageFor(x => x.durum)-->
-    </div>
+    <select name="durum" class="form-control">
+        <option> Seçiniz</option>
+        <option value=true>True</option>
+        <option value=false>False</option>
+    </select>
 
     <br />
 
