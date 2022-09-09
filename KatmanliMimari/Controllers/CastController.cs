@@ -1,6 +1,8 @@
 ﻿using Business.Concrete;
+using Business.Validators;
 using DataAccesLayer.Concrete.EntityFramework;
 using Entity.Concrete;
+using PagedList;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,9 +16,9 @@ namespace KatmanliMimari.Controllers
         // GET: Cast
         CastManager castManager = new CastManager(new EfCastKadroDal());
 
-        public ActionResult Index()
+        public ActionResult Index(int pageNumber = 1)
         {
-            var castList = castManager.list();
+            var castList = castManager.list().ToPagedList(pageNumber, 5);
             return View(castList);
         }
 
@@ -28,8 +30,22 @@ namespace KatmanliMimari.Controllers
         [HttpPost]
         public ActionResult AddCast(CastKadro castKadro)
         {
-            castManager.addBL(castKadro);
-            return RedirectToAction("Index");
+            CastValidator validations = new CastValidator();
+            var sonuc = validations.Validate(castKadro);
+            if (sonuc.IsValid)
+            {
+                castManager.addBL(castKadro);
+                return RedirectToAction("Index");
+            }     
+                 else
+            {
+                foreach (var item in sonuc.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+            }
+            return View();
+           
         }
         public ActionResult deleteCast(int id)
         {
