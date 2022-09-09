@@ -19,12 +19,15 @@
     <br />
     @Html.Label("Durum")
     <br />
-    @Html.TextBoxFor(x => x.durum, new { @class = "form-control" })
-    <div id="durum" class="validation-container">
-        <!-- @Html.ValidationMessageFor(x => x.durum)-->
-    </div>
+    @*@Html.TextBoxFor(x => x.durum, new { @class = "form-control" })*@
+    
+        <select name="durum" class="form-control">
+            <option value=true>Aktif</option>
+            <option value=false>Pasif</option>
+        </select>
+
     <br />
 
-    <input type="submit" value="Ekle" class="form-control bg-fuchsia mt-5" />
+    <input type="submit" value="Güncelle" class="form-control bg-fuchsia mt-5" />
 }
 
