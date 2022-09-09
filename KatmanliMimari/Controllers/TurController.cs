@@ -6,6 +6,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Entity.Concrete;
+using Business.Validators;
+using PagedList;
 
 namespace KatmanliMimari.Controllers
 {
@@ -13,16 +15,31 @@ namespace KatmanliMimari.Controllers
     {
         TurManager turManager = new TurManager(new EfTurDal());
         // GET: Tur
-        public ActionResult Index()
+        public ActionResult Index(int pageNumber=1)
         {
-            var turList=turManager.ListBL();
+            var turList= turManager.ListBL().ToPagedList(pageNumber, 5);
             return View(turList);
         }
         [HttpPost]
         public ActionResult AddTur(Tur tur)
         {
-            turManager.AddBL(tur);
-            return RedirectToAction("Index");
+            TurValidator validations = new TurValidator();
+            var sonuc = validations.Validate(tur);
+
+            if (sonuc.IsValid)
+            {
+                turManager.AddBL(tur);
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                foreach (var item in sonuc.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+            }
+            return View();
+            
         }
         [HttpGet]
         public ActionResult AddTur()
