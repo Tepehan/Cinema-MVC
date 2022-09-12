@@ -14,7 +14,8 @@ namespace Business.Concrete
         ISalonDal _salonDal;
         public SalonManager(ISalonDal salonDal)
         {
-            _salonDal = salonDal;        }
+            _salonDal = salonDal;
+        }
 
         public void addBL(Salon salon)
         {

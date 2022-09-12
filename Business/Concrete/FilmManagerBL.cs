@@ -34,6 +34,11 @@ namespace Business.Concrete
             return _filmDal.GetById(x => x.filmId == id);
         }
 
+        public List<Film> GetListByFilmBL(string filmAdi)
+        {
+            return _filmDal.List(x => x.filmIsim.Contains(filmAdi));
+        }
+
         public List<Film> GetListByTurBL(int id)
         {
             return _filmDal.List(x=>x.turId==id);

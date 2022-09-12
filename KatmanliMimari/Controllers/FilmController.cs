@@ -25,7 +25,7 @@ namespace KatmanliMimari.Controllers
 
 
         public ActionResult List(int pageNumber = 1) {
-            turFilmModal.filmModal = filmManagerBL.ListBL().ToPagedList(pageNumber, 2);
+            turFilmModal.filmModal = filmManagerBL.ListBL().ToPagedList(pageNumber, 20);
             turFilmModal.turModal = turManagerBL.ListBL();
             return View(turFilmModal);
         }
@@ -78,6 +78,10 @@ namespace KatmanliMimari.Controllers
             filmManagerBL.UpdateBL(film);
             return RedirectToAction("List");
            
+        }
+        public ActionResult searchByFilmName(String filmName) {
+            var searchedList=filmManagerBL.GetListByFilmBL(filmName);
+            return View(searchedList);
         }
         [HttpGet]
         public ActionResult filterByTur(int id) {

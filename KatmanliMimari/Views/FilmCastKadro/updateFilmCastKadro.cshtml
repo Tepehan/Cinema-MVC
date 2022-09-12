@@ -1,0 +1,47 @@
+﻿@using Entity.Concrete
+@model FilmCastKadro
+@{
+
+    ViewBag.Title = "updateFilmCastKadro";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>Film Cast Kadro Güncelle</h2>
+@using (Html.BeginForm("updateFilmCastKadro", "FilmCastKadro", FormMethod.Post, new
+{ @class = "form-group" }))
+{@Html.HiddenFor(x => x.filmlerCastKadroId);
+@Html.Label("Durum")
+<br />
+<select name="durum" class="form-control">
+    <option value=true>True</option>
+    <option value=false>False</option>
+</select>
+<br />
+<div id="durum" class="validation-container">
+    @Html.ValidationMessageFor(x => x.durum)
+</div>
+@Html.Label("Tarih")
+<br />
+<input type="date" name="tarih" class="form-control m-1" onfocus="document.getElementById('date').style.display='none'" />
+<div id="tarih" class="validation-container">
+    @Html.ValidationMessageFor(x => x.tarih)
+</div>
+<br />
+@Html.Label("Cast Kadro Ad")
+<br />
+@Html.DropDownList("castKadroId", (List<SelectListItem>)ViewBag.castKadro, new { @class = "form-control" })
+<div id="castkadroId" class="validation-container">
+    <!-- @Html.ValidationMessageFor(x => x.castKadroId)-->
+</div>
+<br />
+@Html.Label("Film Ad")
+<br />
+@Html.DropDownList("filmId", (List<SelectListItem>)ViewBag.film, new { @class = "form-control" })
+<div id="filmId" class="validation-container">
+    <!-- @Html.ValidationMessageFor(x => x.filmId)-->
+</div>
+<br />
+
+<input type="submit" value="Ekle" class="form-control bg-fuchsia mt-5" />
+}
+

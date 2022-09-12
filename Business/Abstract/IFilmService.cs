@@ -14,7 +14,8 @@ namespace Business.Abstract
         void DeleteBL(Film film);
         List<Film> ListBL();
         List<Film> GetListByTurBL(int id);
-       Film GetByIdBL(int id);
+        List<Film> GetListByFilmBL(string filmAdi);
+        Film GetByIdBL(int id);
         
        
     }
