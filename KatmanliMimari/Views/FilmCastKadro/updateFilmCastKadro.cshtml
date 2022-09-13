@@ -10,16 +10,8 @@
 @using (Html.BeginForm("updateFilmCastKadro", "FilmCastKadro", FormMethod.Post, new
 { @class = "form-group" }))
 {@Html.HiddenFor(x => x.filmlerCastKadroId);
-@Html.Label("Durum")
-<br />
-<select name="durum" class="form-control">
-    <option value=true>True</option>
-    <option value=false>False</option>
-</select>
-<br />
-<div id="durum" class="validation-container">
-    @Html.ValidationMessageFor(x => x.durum)
-</div>
+
+
 @Html.Label("Tarih")
 <br />
 <input type="date" name="tarih" class="form-control m-1" onfocus="document.getElementById('date').style.display='none'" />
@@ -41,6 +33,15 @@
     <!-- @Html.ValidationMessageFor(x => x.filmId)-->
 </div>
 <br />
+@Html.Label("Durum")
+<br />
+<select name="durum" class="form-control">
+    <option value=true>True</option>
+    <option value=false>False</option>
+</select>
+<div id="durum" class="validation-container">
+    @Html.ValidationMessageFor(x => x.durum)
+</div>
 
 <input type="submit" value="Ekle" class="form-control bg-fuchsia mt-5" />
 }

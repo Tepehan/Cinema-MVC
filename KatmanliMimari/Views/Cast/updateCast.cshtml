@@ -46,10 +46,10 @@
     <br />
     @Html.Label("Durum")
     <br />
-    @Html.TextBoxFor(x => x.durum, new { @class = "form-control" })
-    <div id="durum" class="validation-container">
-        <!-- @Html.ValidationMessageFor(x => x.durum)-->
-    </div>
+    <select name="durum" class="form-control">
+        <option value=true>True</option>
+        <option value=false>False</option>
+    </select>
 
     <br />
 

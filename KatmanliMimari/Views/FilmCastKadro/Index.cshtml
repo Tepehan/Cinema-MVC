@@ -38,24 +38,25 @@
             <div class="col-12">
                 <table class="table table-hover">
                     <tr>
-                        <th>Durum</th>
+
                         <th>Tarih</th>
                         <th>Cast Kadro Ad Soyad</th>
                         <th>Film Ad</th>
+                        <th>Durum</th>
 
                         @foreach (var item in Model)
                         {
 
-                        <tr>
-                            <th>@item.durum</th>
-                            <td>@item.tarih</td>
-                            <td>@item.castKadro.ad @item.castKadro.soyad</td>
-                            <td>@item.film.filmIsim</td>
+<tr>
 
+                        <td>@item.tarih</td>
+                        <td>@item.castKadro.ad @item.castKadro.soyad</td>
+                        <td>@item.film.filmIsim</td>
+                        <th>@item.durum</th>
 
-                            <td><a href="~/FilmCastKadro/updateFilmCastKadro/@item.filmlerCastKadroId" class="btn btn-primary text-white">Güncelle</a></td>
-                            <td><button type="button" class="btn btn-danger text-white" data-bs-whatever="@item.filmlerCastKadroId" data-bs-toggle="modal" data-bs-target="#silModal">Sil</button></td>
-                        </tr>}
+                        <td><a href="~/FilmCastKadro/updateFilmCastKadro/@item.filmlerCastKadroId" class="btn btn-primary text-white">Güncelle</a></td>
+                        <td><button type="button" class="btn btn-danger text-white" data-bs-whatever="@item.filmlerCastKadroId" data-bs-toggle="modal" data-bs-target="#silModal">Sil</button></td>
+                    </tr>}
                     </table>
                     <div class="text-center"><a href="~/FilmCastKadro/addFilmCastKadro/" class="btn btn-success text-white">Film Cast Kadro Ekle</a></div>
                 </div>
