@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Business.Concrete;
+using DataAccesLayer.Concrete.EntityFramework;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,9 +10,11 @@ namespace KatmanliMimari.Controllers
 {
     public class HomeController : Controller
     {
+        SliderManager sliderManager = new SliderManager(new EfSliderDal());
         public ActionResult Index()
         {
-            return View();
+            var sliderlist=sliderManager.list();
+            return View(sliderlist);
         }
 
         public ActionResult About()

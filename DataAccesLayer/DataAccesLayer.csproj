@@ -59,6 +59,7 @@
     <Compile Include="Abstract\ISalonDal.cs" />
     <Compile Include="Abstract\ISalonFilmDal.cs" />
     <Compile Include="Abstract\ISalonFilmMusteriDal.cs" />
+    <Compile Include="Abstract\ISliderDal.cs" />
     <Compile Include="Abstract\ITurDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfCastKadroDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfFilmCastKadroDal.cs" />
@@ -67,6 +68,7 @@
     <Compile Include="Concrete\EntityFramework\EfSalonDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfSalonFilmDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfSalonFilmMusteriDal.cs" />
+    <Compile Include="Concrete\EntityFramework\EfSliderDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfTurDal.cs" />
     <Compile Include="Concrete\Repositories\GenericRepository.cs" />
     <Compile Include="Context.cs" />
@@ -77,6 +79,10 @@
     <Compile Include="Migrations\202209061055025_added_admin_table_mig1.cs" />
     <Compile Include="Migrations\202209061055025_added_admin_table_mig1.designer.cs">
       <DependentUpon>202209061055025_added_admin_table_mig1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202209140858143_sliders.cs" />
+    <Compile Include="Migrations\202209140858143_sliders.designer.cs">
+      <DependentUpon>202209140858143_sliders.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -97,6 +103,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202209061055025_added_admin_table_mig1.resx">
       <DependentUpon>202209061055025_added_admin_table_mig1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202209140858143_sliders.resx">
+      <DependentUpon>202209140858143_sliders.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

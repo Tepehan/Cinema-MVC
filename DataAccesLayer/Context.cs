@@ -20,5 +20,6 @@ namespace DataAccesLayer
         public DbSet<SalonFilmMusteri> salonFilmMusteri { get; set; }
         public DbSet<Tur> turler { get; set; }
         public DbSet<Admin> adminler { get; set; }
+        public DbSet<Slider> sliderlar { get; set; }
     }
 }
