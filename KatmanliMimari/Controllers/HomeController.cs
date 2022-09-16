@@ -1,5 +1,6 @@
 ﻿using Business.Concrete;
 using DataAccesLayer.Concrete.EntityFramework;
+using Entity.Concrete.Modals;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,11 +11,18 @@ namespace KatmanliMimari.Controllers
 {
     public class HomeController : Controller
     {
+       
         SliderManager sliderManager = new SliderManager(new EfSliderDal());
+        FilmManagerBL filmmanagr = new FilmManagerBL(new EfFilmDal());
         public ActionResult Index()
         {
-            var sliderlist=sliderManager.list();
-            return View(sliderlist);
+            HomeModal modal = new HomeModal();
+
+            var sliderList=sliderManager.list();
+            var filmList = filmmanagr.ListBL();
+            modal.filmModal = filmList;
+            modal.sliderModal = sliderList;
+            return View(modal);
         }
 
         public ActionResult About()
