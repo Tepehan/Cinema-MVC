@@ -61,6 +61,7 @@
     <Compile Include="Concrete\CastKadro.cs" />
     <Compile Include="Concrete\Film.cs" />
     <Compile Include="Concrete\FilmCastKadro.cs" />
+    <Compile Include="Concrete\Modals\HomeModal.cs" />
     <Compile Include="Concrete\Modals\SalonFilmModal.cs" />
     <Compile Include="Concrete\Modals\TurFilmModal.cs" />
     <Compile Include="Concrete\Musteri.cs" />
