@@ -23,7 +23,7 @@ namespace Business.Concrete
 
         public CastKadro getById(int id)
         {
-            return _castKadroDal.GetById(x => x.castKadroId == id);
+            return _castKadroDal.GetBy(x => x.castKadroId == id);
         }
 
         public List<CastKadro> list()

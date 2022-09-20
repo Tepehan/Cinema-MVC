@@ -25,7 +25,7 @@ namespace Business.Concrete
 
         public SalonFilm getById(int id)
         {
-            return salonFilmDal.GetById(x=>x.salonFilmlerId==id);
+            return salonFilmDal.GetBy(x=>x.salonFilmlerId==id);
         }
 
         public List<SalonFilm> list()

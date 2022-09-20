@@ -31,7 +31,7 @@ namespace Business.Concrete
 
         public Film GetByIdBL(int id)
         {
-            return _filmDal.GetById(x => x.filmId == id);
+            return _filmDal.GetBy(x => x.filmId == id);
         }
 
         public List<Film> GetListByFilmBL(string filmAdi)
