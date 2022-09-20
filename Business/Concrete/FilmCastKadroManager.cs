@@ -30,7 +30,7 @@ namespace Business.Concrete
 
         public FilmCastKadro getById(int id)
         {
-            return _filmCastKadroDal.GetById(x => x.filmlerCastKadroId == id);
+            return _filmCastKadroDal.GetBy(x => x.filmlerCastKadroId == id);
         }
 
         public List<FilmCastKadro> list()
