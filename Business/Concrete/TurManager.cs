@@ -28,7 +28,7 @@ namespace Business.Concrete
 
         public Tur getTurById(int id)
         {
-           return _turDal.GetById(x=>x.turId==id);
+           return _turDal.GetBy(x=>x.turId==id);
         }
 
         public List<Tur> ListBL()
