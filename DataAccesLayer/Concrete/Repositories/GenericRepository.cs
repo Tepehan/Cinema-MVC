@@ -26,7 +26,7 @@ namespace DataAccesLayer.Concrete.Repositories
             context.SaveChanges();
         }
 
-        public T GetById(Expression<Func<T, bool>> filter)
+        public T GetBy(Expression<Func<T, bool>> filter)
         {
             return _object.SingleOrDefault(filter);
         }

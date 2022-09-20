@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\IAdminDal.cs" />
     <Compile Include="Abstract\ICastKadroDal.cs" />
     <Compile Include="Abstract\IFilmCastKadroDal.cs" />
     <Compile Include="Abstract\IFilmDal.cs" />
@@ -61,6 +62,7 @@
     <Compile Include="Abstract\ISalonFilmMusteriDal.cs" />
     <Compile Include="Abstract\ISliderDal.cs" />
     <Compile Include="Abstract\ITurDal.cs" />
+    <Compile Include="Concrete\EntityFramework\EfAdminDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfCastKadroDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfFilmCastKadroDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfFilmDal.cs" />

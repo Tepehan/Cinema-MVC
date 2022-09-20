@@ -1,4 +1,6 @@
-﻿using DataAccesLayer;
+﻿using Business.Concrete;
+using DataAccesLayer;
+using DataAccesLayer.Concrete.EntityFramework;
 using Entity.Concrete;
 using System;
 using System.Collections.Generic;
@@ -11,6 +13,7 @@ namespace KatmanliMimari.Controllers
 {   [AllowAnonymous]
     public class AdminController : Controller
     {
+        AdminManager adminManager = new AdminManager(new EfAdminDal());
         // GET: Admin
         public ActionResult Index()
         {
@@ -20,8 +23,8 @@ namespace KatmanliMimari.Controllers
         public ActionResult login() { return View(); }
         [HttpPost]
         public ActionResult login(Admin admin) {
-            Context c = new Context();
-            var sonuc=c.adminler.FirstOrDefault(x => x.kullaniciAd == admin.kullaniciAd && x.sifre == admin.sifre);
+
+            var sonuc = adminManager.Get(admin.kullaniciAd,admin.sifre);
             if (sonuc != null) {
                 //set the logined admin toAuthCookie
                 FormsAuthentication.SetAuthCookie(sonuc.kullaniciAd,false);

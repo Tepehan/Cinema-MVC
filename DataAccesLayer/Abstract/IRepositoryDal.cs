@@ -13,7 +13,7 @@ namespace DataAccesLayer.Abstract
         void Delete(T p);
         void Update(T p);
         List<T> List();
-        T GetById(Expression<Func<T,bool>> filter);
+        T GetBy(Expression<Func<T,bool>> filter);
         List<T> List(Expression<Func<T,bool>>filter);
     }
 }

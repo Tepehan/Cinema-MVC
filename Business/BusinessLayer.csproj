@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\IAdminService.cs" />
     <Compile Include="Abstract\ICastService.cs" />
     <Compile Include="Abstract\IFilmCastKadroService.cs" />
     <Compile Include="Abstract\IFilmService.cs" />
@@ -57,6 +58,7 @@
     <Compile Include="Abstract\ISalonService.cs" />
     <Compile Include="Abstract\ISliderService.cs" />
     <Compile Include="Abstract\ITurService.cs" />
+    <Compile Include="Concrete\AdminManager.cs" />
     <Compile Include="Concrete\CastManager.cs" />
     <Compile Include="Concrete\FilmCastKadroManager.cs" />
     <Compile Include="Concrete\FilmManagerBL.cs" />
