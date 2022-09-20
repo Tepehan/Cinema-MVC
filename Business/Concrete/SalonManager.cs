@@ -24,7 +24,7 @@ namespace Business.Concrete
 
         public Salon getById(int id)
         {
-            return _salonDal.GetById(x => x.salonId == id);
+            return _salonDal.GetBy(x => x.salonId == id);
         }
 
         public List<Salon> list()
