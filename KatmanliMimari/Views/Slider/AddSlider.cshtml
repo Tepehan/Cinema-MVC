@@ -1,0 +1,37 @@
+﻿@using Entity.Concrete
+@model Slider
+@{
+    /**/
+
+    ViewBag.Title = "AddSlider";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<link href="~/Admin/css/style2.css" rel="stylesheet" />
+<h2>Slider Ekle</h2>
+@using (Html.BeginForm("AddSlider", "Slider", FormMethod.Post, new
+{ @class = "form-group" }))
+{
+    @Html.Label("Başlık")
+    <br />
+    @Html.TextBoxFor(x => x.baslik, new { @class = "form-control" })
+    <div id="baslik" class="validation-container">
+        @Html.ValidationMessageFor(x => x.baslik)
+    </div>
+    <br />
+    @Html.Label("İçerik")
+    <br />
+    @Html.TextBoxFor(x => x.icerik, new { @class = "form-control" })
+    <div id="icerik" class="validation-container">
+        @Html.ValidationMessageFor(x => x.icerik)
+    </div>
+    <br />
+    @Html.Label("Resim")
+    <br />
+    <input type="file" name="resimUrl">
+    <div id="resimUrl" class="validation-container">
+        @Html.ValidationMessageFor(x => x.resimUrl)
+    </div>
+    <br />
+
+    <input type="submit" value="Ekle" class="form-control bg-fuchsia mt-5" />
+}
