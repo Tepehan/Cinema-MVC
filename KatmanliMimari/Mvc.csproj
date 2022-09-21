@@ -4510,6 +4510,7 @@
     <Content Include="Views\Slider\Index.cshtml" />
     <Content Include="Views\Slider\AddSlider.cshtml" />
     <Content Include="Views\Slider\updateSlider.cshtml" />
+    <Content Include="tsconfig.json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
