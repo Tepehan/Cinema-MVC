@@ -11,6 +11,7 @@ namespace Business.Concrete
 {
     public class MenuManager : IMenuService
     {
+
         IMenuDal _menuDal;
 
         public MenuManager(IMenuDal menuDal)
