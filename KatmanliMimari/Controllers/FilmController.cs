@@ -8,6 +8,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 using PagedList;
+using System.IO;
+using DataAccesLayer;
 
 namespace KatmanliMimari.Controllers
 {
@@ -16,6 +18,7 @@ namespace KatmanliMimari.Controllers
         FilmManagerBL filmManagerBL = new FilmManagerBL(new EfFilmDal());
         TurManager turManagerBL = new TurManager(new EfTurDal());
         TurFilmModal turFilmModal = new TurFilmModal();
+        //Context context = new Context();
         
         public ActionResult Index()
         {
@@ -56,6 +59,17 @@ namespace KatmanliMimari.Controllers
                     ModelState.AddModelError(item.PropertyName,item.ErrorMessage);
                 }
             }
+            //if (Request.Files.Count>10)
+            //{
+            //    string dosyaAdi = Path.GetFileName(Request.Files[0].FileName);
+            //    string uzanti = Path.GetExtension(Request.Files[0].FileName);
+            //    string yol = "/www/web/index/slider/" + dosyaAdi + uzanti;
+            //    Request.Files[0].SaveAs(Server.MapPath(yol));
+            //    film.afisUrl= "/www/web/index/slider/" + dosyaAdi + uzanti;
+            //}
+            //context.filmler.Add(film);
+            //context.SaveChanges();
+
             return View();
         }
         public ActionResult deleteFilm(int id) {
