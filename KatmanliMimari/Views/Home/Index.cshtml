@@ -5,11 +5,95 @@
     Layout = "~/Views/Shared/NavbarLayout.cshtml";
     ViewBag.Title = "Home Page";
 }
+<!-- Custom CSS  for Menu -->
+<link href="~/www/web/index/menustyle.css" rel="stylesheet" />
 
+<!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet" />
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,700&display=swap"
+      rel="stylesheet" />
+<!-- MDB -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css"
+      rel="stylesheet" />
+<!-- MDB -->
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"></script>
 <!-- Custom CSS  for Card Slider -->
 <link href="~/www/web/index/stil.css" rel="stylesheet" />
+
 <!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+@section Menu
+{
+    <div class="container-fluid">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link " href="#">
+                    Anasayfa
+                </a>
+
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="#">
+                   Sinemalar
+                </a>
+
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="#">
+                    Filmler
+                </a>
+
+            </li>
+            <!-- Dropdown -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                   data-mdb-toggle="dropdown" aria-expanded="false">
+                    Menüler
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li>
+                        <a class="dropdown-item" href="#">Action</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">
+                            Submenu &raquo;
+                        </a>
+                        <ul class="dropdown-menu dropdown-submenu">
+                            <li>
+                                <a class="dropdown-item" href="#">Submenu item 1</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Submenu item 2</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Submenu item 3 &raquo; </a>
+                                <ul class="dropdown-menu dropdown-submenu">
+                                    <li>
+                                        <a class="dropdown-item" href="#">Multi level 1</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">Multi level 2</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Submenu item 4</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Submenu item 5</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+}
 <!--Slider begin-->
 <div id="slider" class="carousel slide" data-bs-ride="false">
     <div class="carousel-indicators">
@@ -69,11 +153,11 @@
                         </div>
 
                     </div>
-                    <div class="img-wrapper"><img src="~/www/web/index/slider/@Model.filmModal.ElementAt(0).afisUrl" class="d-block w-100" alt="..."> </div>
+                    <div class="img-wrapper"><img src="~/www/web/index/slider/card/@Model.filmModal.ElementAt(0).afisUrl" class="d-block w-100" alt="..."> </div>
                     <div class="card-body">
                         <h5 class="card-title">@(Model.filmModal.ElementAt(0).filmIsim.Length >= 15 ? Model.filmModal.ElementAt(0).filmIsim.Substring(0, 13) + ".." : Model.filmModal.ElementAt(0).filmIsim)</h5>
                         <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                card's content.</p> -->
+                        card's content.</p> -->
                         <a href="#" class="btn btn-danger">Detaylara Git</a>
                     </div>
                 </div>
@@ -92,11 +176,11 @@
                             </div>
 
                         </div>
-                        <div class="img-wrapper"><img src="~/www/web/index/slider/@Model.filmModal.ElementAt(i).afisUrl" class="d-block w-100" alt="..."> </div>
+                        <div class="img-wrapper"><img src="~/www/web/index/slider/card/@Model.filmModal.ElementAt(i).afisUrl" class="d-block w-100" alt="..."> </div>
                         <div class="card-body">
                             <h5 class="card-title">@(Model.filmModal.ElementAt(i).filmIsim.Length >= 15 ? Model.filmModal.ElementAt(i).filmIsim.Substring(0, 13) + ".." : Model.filmModal.ElementAt(i).filmIsim)</h5>
                             <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p> -->
+                            card's content.</p> -->
                             <a href="#" class="btn btn-danger">Detaylara Git</a>
                         </div>
                     </div>
@@ -125,8 +209,6 @@
 <script async src="https://cdn.jsdelivr.net/npm/es-module-shims@1/dist/es-module-shims.min.js"
         crossorigin="anonymous"></script>
 <!--import map bootstrap-->
-
-
 <!-- Custom JQuery for Card Slider  -->
 <script>
     var scrollPosition = 0;
@@ -138,12 +220,12 @@
         //var carousel = new bootstrap.Carousel(multipleCardCarousel, {
         //    interval: false,
         //});
-    
+
         var carouselWidth = $(".mcontent .carousel-inner")[0].scrollWidth;
         console.log("carouselWidth " + carouselWidth);
         var cardWidth = $(".mcontent .carousel-item").width();
         console.log("cardWidth " + cardWidth);
-      
+
         $("#carouselExampleControls .carousel-control-next").on("click", function () {
             console.log("scrollPosition " + scrollPosition);
             var count = (carouselWidth / cardWidth);
@@ -169,7 +251,7 @@
                 );
             }
         });
-  
+
     }
     else {
         $(multipleCardCarousel).addClass("slide");
