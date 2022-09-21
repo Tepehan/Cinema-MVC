@@ -62,7 +62,9 @@
     <br />
     @Html.Label("Afiş Resmi")
     <br />
-    @Html.TextBoxFor(x => x.afisUrl, new { @class = "form-control" })
+    <input type="file" name="afisUrl">
+
+
     <div id="ozet" class="validation-container">
         @Html.ValidationMessageFor(x => x.afisUrl)
     </div>
