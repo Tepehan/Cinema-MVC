@@ -26,3 +26,4 @@ namespace Entity.Concrete
     }
 }
 //musteriler ile ilişki
+//yorum
