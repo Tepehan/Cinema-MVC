@@ -68,6 +68,8 @@
     <Compile Include="Validators\FilmCastKadroValidator.cs" />
     <Compile Include="Validators\FilmValidator.cs" />
     <Compile Include="Validators\CastValidator.cs" />
+    <Compile Include="Validators\SalonValidator.cs" />
+    <Compile Include="Validators\SliderValidator.cs" />
     <Compile Include="Validators\TurValidator.cs" />
   </ItemGroup>
   <ItemGroup>
