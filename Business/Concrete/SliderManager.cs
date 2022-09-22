@@ -18,7 +18,7 @@ namespace Business.Concrete
             _sliderDal = sliderDal;
         }
 
-        public List<Slider> list()
+        public List<Slider> listBL()
         {
             return _sliderDal.List();
         }

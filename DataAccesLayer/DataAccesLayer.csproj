@@ -54,6 +54,7 @@
     <Compile Include="Abstract\ICastKadroDal.cs" />
     <Compile Include="Abstract\IFilmCastKadroDal.cs" />
     <Compile Include="Abstract\IFilmDal.cs" />
+    <Compile Include="Abstract\IMenuDal.cs" />
     <Compile Include="Abstract\IMusteriDal.cs" />
     <Compile Include="Abstract\IRepositoryDal.cs" />
     <Compile Include="Abstract\ISalonDal.cs" />
@@ -64,6 +65,7 @@
     <Compile Include="Concrete\EntityFramework\EfCastKadroDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfFilmCastKadroDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfFilmDal.cs" />
+    <Compile Include="Concrete\EntityFramework\EfMenuDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfMusteriDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfSalonDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfSalonFilmDal.cs" />

@@ -10,7 +10,8 @@ namespace Entity.Concrete.Modals
     {
         public IEnumerable<Slider> sliderModal { get; set; }
         public IEnumerable<Film> filmModal { get; set; }
-       
+        public IEnumerable<Menu> menuModal { get; set; }
+
 
     }
 }

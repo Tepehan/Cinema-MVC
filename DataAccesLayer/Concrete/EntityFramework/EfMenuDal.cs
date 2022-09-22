@@ -11,5 +11,6 @@ namespace DataAccesLayer.Concrete.EntityFramework
 {
     public class EfMenuDal : GenericRepository<Menu>, IMenuDal
     {
+
     }
 }

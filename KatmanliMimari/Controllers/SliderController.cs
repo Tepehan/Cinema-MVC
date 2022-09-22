@@ -17,7 +17,7 @@ namespace KatmanliMimari.Controllers
         // GET: Slider
         public ActionResult Index(int pageNumber = 1)
         {
-            var sliderList = sliderManager.list().ToPagedList(pageNumber, 5);
+            var sliderList = sliderManager.listBL().ToPagedList(pageNumber, 5);
             return View(sliderList);
         }
         [HttpPost]

@@ -13,15 +13,19 @@ namespace KatmanliMimari.Controllers
     {
        
         SliderManager sliderManager = new SliderManager(new EfSliderDal());
-        FilmManagerBL filmmanagr = new FilmManagerBL(new EfFilmDal());
+        FilmManagerBL filmManager = new FilmManagerBL(new EfFilmDal());
+        MenuManager menuManager = new MenuManager(new EfMenuDal());
+
         public ActionResult Index()
         {
             HomeModal modal = new HomeModal();
 
-            var sliderList=sliderManager.list();
-            var filmList = filmmanagr.ListBL();
+            var sliderList=sliderManager.listBL();
+            var filmList = filmManager.ListBL();
+            var menuList=menuManager.ListBL();
             modal.filmModal = filmList;
             modal.sliderModal = sliderList;
+            modal.menuModal=menuList;
             return View(modal);
         }
 

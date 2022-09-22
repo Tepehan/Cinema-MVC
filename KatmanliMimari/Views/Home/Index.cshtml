@@ -26,26 +26,32 @@
 <!-- CSS only -->
 @section Menu
 {
+   
     <div class="container-fluid">
         <ul class="navbar-nav">
-            <li class="nav-item">
+            @*<li class="nav-item active">
                 <a class="nav-link " href="#">
                     Anasayfa
                 </a>
 
-            </li>
-            <li class="nav-item">
-                <a class="nav-link " href="#">
-                    Sinemalar
-                </a>
+            </li>*@
+            @foreach (var menu in Model.menuModal) //Model olarak yollanan Menü listesini dönüyorum.
+            {
+                if (menu.parentId == 0) //Parent ıd 0 ise kendisi ana menüdür.
+                {
+            <li class="nav-item ">
 
-            </li>
-            <li class="nav-item">
                 <a class="nav-link " href="#">
-                    Filmler
+                    @menu.menuName <!-- burada ana kategori listeleniyor.-->
                 </a>
-
+                    @if (menu.children.Count > 0) //childleri varsa addsubmenü fonksiyonu ile tablo şeklinde ekliyor.
+                    {
+                        //addSubMenu(menu);
+                    }
             </li>
+                }
+            }
+
             <!-- Dropdown -->
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
