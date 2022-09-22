@@ -67,6 +67,7 @@
     <Compile Include="Concrete\Modals\TurFilmModal.cs" />
     <Compile Include="Concrete\Musteri.cs" />
     <Compile Include="Concrete\Slider.cs" />
+    <Compile Include="Concrete\Yorum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Concrete\Salon.cs" />
     <Compile Include="Concrete\SalonFilm.cs" />
