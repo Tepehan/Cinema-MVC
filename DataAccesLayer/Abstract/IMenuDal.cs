@@ -10,6 +10,6 @@ namespace DataAccesLayer.Abstract
 {
     public interface IMenuDal : IRepositoryDal<Menu>
     {
-       
+  
     }
 }
