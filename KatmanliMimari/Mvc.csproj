@@ -2386,7 +2386,6 @@
     <Content Include="Scripts\umd\popper.min.js" />
     <Content Include="www\web\bilet\bilet.html" />
     <Content Include="www\web\bilet\stil.css" />
-    <Content Include="www\web\bilet_al\bilet_al.html" />
     <Content Include="www\web\fontawesome-free-6.1.2-desktop\LICENSE.txt" />
     <Content Include="www\web\fontawesome-free-6.1.2-desktop\svgs\brands\42-group.svg" />
     <Content Include="www\web\fontawesome-free-6.1.2-desktop\svgs\brands\500px.svg" />
