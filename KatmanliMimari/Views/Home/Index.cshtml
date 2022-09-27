@@ -50,7 +50,7 @@
             {
                 if (menu.parentId == null) //Parent ıd 0 ise kendisi ana menüdür.
                 {
-                    if (menu.children.Count > 0)
+                    if (menu.children.Count > 0)//cildren varsa  li class nav-item dropdown olsun
                     {
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
@@ -61,6 +61,7 @@
                         </li>
 
                     }
+                    //cildren yoksa  li class nav-item olsun
                     else
                     {
                         <li class="nav-item">

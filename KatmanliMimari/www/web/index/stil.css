@@ -88,8 +88,9 @@ display: none;
 .mcontent .card:hover .secondDiv{
   display: flex;
 }
-.mcontent .card .secondDiv .btn-light:hover{
- background-color: #343a40;
- color:white;
- border: 1px solid #343a40 ;
+.mcontent .card .secondDiv .btn-light:hover {
+    background-color: #343a40;
+    color: white;
+    border: 1px solid #343a40;
+  
 }

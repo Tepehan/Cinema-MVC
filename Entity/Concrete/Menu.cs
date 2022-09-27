@@ -18,6 +18,6 @@ namespace Entity.Concrete
         public int? parentId { get; set; }
         public virtual Menu parent { get; set;}
         [InverseProperty("parent")]
-        public ICollection<Menu> children { get; set;}
+        public ICollection<Menu> children { get; set; }
     }
 }
