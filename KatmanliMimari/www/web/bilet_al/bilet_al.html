@@ -1,0 +1,330 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <title>Bilet</title>
+    <style>
+        .carousel-inner {
+            padding: 1.5em;
+        }
+
+        .mcontent .card {
+            box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+        }
+
+        .mcontent .carousel-control-prev,
+        .mcontent .carousel-control-next {
+            background-color: #e1e1e1;
+            width: 3vh;
+            height: 3vh;
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        @media (min-width: 768px) {
+
+            .mcontent .carousel-item {
+                margin-right: 0;
+                flex: 0 0 12.5%;
+                display: block;
+            }
+
+            .mcontent .carousel-inner {
+                display: flex;
+            }
+        }
+
+
+        .mobile-margin {
+            margin-top: 5px;
+        }
+
+        #carouselExampleControls {
+            max-width: 960px;
+            margin: auto;
+            margin-top: 50px;
+            border-bottom: #343a404f solid 0.2px;
+            border-top: #343a404f solid 0.2px;
+        }
+
+        .card {
+            width: 300px;
+            border: none;
+            height: 100px;
+            align-items: center;
+        }
+
+            .card:hover {
+                border-bottom: #FF0000 solid;
+            }
+
+        #c {
+            margin-left: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            width: 100px;
+            height: 40px;
+            text-align: right;
+            border: 1px solid black;
+            background-color: white;
+            font-weight: bold;
+        }
+
+            #c:hover {
+                margin-left: 10px;
+                margin-top: 5px;
+                border-radius: 5px;
+                width: 100px;
+                height: 40px;
+                text-align: right;
+                background-image: linear-gradient(to bottom left, #e6007e, #e6007e, rgb(209, 13, 13));
+                font-weight: bold;
+                color: white;
+                border: none;
+            }
+
+        #yorum {
+            color: rgb(0, 0, 0);
+            font-size: 30px;
+        }
+
+        .form-control:focus {
+            box-shadow: none;
+            outline: none;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ana div başlangıcı -->
+    <div class="container">
+        <!-- bilet al div başlangıcı -->
+        <div id="biletal" class="container p-4"
+             style="color: #fff;background-image: linear-gradient(to bottom left,#e6007e,#e6007e,rgb(209, 13, 13)); border-radius: 10px;margin: auto;">
+            <div>
+                <div class="row d-flex justify-content-center">
+                    <div class="col-sm-2 ">
+
+                        <h3 class="" style="margin-bottom: 0px;">Bilet Al</h3>
+                        <br>
+                        <h6 class="" style="margin-top: 0px;">Sinema Seç</h6>
+
+
+                    </div>
+
+                    <div class="col-sm-6 mobile-margin visible-xs">
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle w-100" type="button" data-bs-toggle="dropdown"
+                                    style="background-image: linear-gradient(to bottom left,#e6007e,#e6007e);border: none;border-bottom:3px solid #fff;color:white;">
+                                Sinema Seç
+                            </button>
+                            <ul class="dropdown-menu ">
+                                <li><a class="dropdown-item" href="#">İstanbul Anadolu</a></li>
+                                <li><a class="dropdown-item" href="#">İstanbul Avrupa</a></li>
+                                <li><a class="dropdown-item" href="#">Ankara</a></li>
+                                <li><a class="dropdown-item" href="#">İzmir</a></li>
+                                <li><a class="dropdown-item" href="#">Adana</a></li>
+                                <li><a class="dropdown-item" href="#">Antalya</a></li>
+                                <li><a class="dropdown-item" href="#">Bursa</a></li>
+                                <li><a class="dropdown-item" href="#">Çanakkale</a></li>
+                                <li><a class="dropdown-item" href="#">Diyarbakır</a></li>
+                                <li><a class="dropdown-item" href="#">Eskişehir</a></li>
+                                <li><a class="dropdown-item" href="#">Kayseri</a></li>
+                                <li><a class="dropdown-item" href="#">Kocaeli</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- bilet al div bitiş -->
+
+        <div class="mcontent mt-5 ml-0">
+            <!--card-slider-->
+            <div id="carouselExampleControls" class="carousel" data-bs-ride="carousel">
+                <div class="carousel-inner ">
+                    <div class="carousel-item active">
+                        <div class="card" id="mcard">
+
+                            <div class="card-body">
+                                <h5 class="card-title">Bugün</h5>
+                                <span> </span>
+                                <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                card's content.</p> -->
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+
+                            <div class="card-body">
+                                <h5 class="card-title">25 Eylül</h5>
+                                <span>Cuma</span>
+                                <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                card's content.</p> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+
+                            <div class="card-body">
+                                <h5 class="card-title">24 Eylül</h5>
+                                <span>Cumartesi</span>
+                                <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                card's content.</p> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+
+                            <div class="card-body">
+                                <h5 class="card-title">26 Eylül</h5>
+                                <span>Pazar</span>
+                                <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                                card's content.</p> -->
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <button class="carousel-control-prev" style="background-color:#dc3545;" type="button"
+                        data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" style="background-color:#dc3545;" type="button"
+                        data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <span class="carousel-control-next-icon data-bs-ride" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+                <!--card-slider-end-->
+            </div>
+            <!--content end-->
+        </div>
+        <!-- sinema div başlangiç -->
+
+        <div id="gizlenebilir">
+            <div id="" class="d-flex container mt-3 rounded justify-content-end p-4"
+                 style="background-image: linear-gradient(to bottom left,#e6007e,#e6007e,rgb(209, 13, 13));">
+                <div class="d-flex justify-content-center col-10">
+                    <span class="text-light">Cinemaximum Akasya</span>
+                </div>
+                <div class="d-flex col-2  justify-content-end">
+                    <button type="button" class="btn-close btn-close-white"
+                            onclick="$('#gizlenebilir').toggle(function(){
+                $(this).animate({'height': '0px'}, 100);
+            }, function(){
+                $(this).animate({'height': '0px'}, 100);
+            });
+               "></button>
+                </div>
+            </div>
+            <br>
+
+            <div>
+                <span style="margin-top: 5px; font-size: 20px;"> 2D - ALTYAZILI</span>
+                <div class="mt-2">
+                    <button id="c" class="button">13:00</button>
+                    <button id="c" class="button">15:15</button>
+                    <button id="c" class="button">17:30</button>
+                    <button id="c" class="button">19:45</button>
+                    <button id="c" class="button">22:00</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6" style="border-bottom: black solid 1px;height: 160px;">
+                    <p id="yorum" class="mt-5">Yorumlar</p>
+                    <span>İlk yorumu sen yaz!</span>
+                </div>
+                <div class="col-6">
+                    <p id="yorum" class="mt-5">Yorum Yaz</p>
+                    <div class="input-group" id="textarea">
+
+                        <textarea class="form-control rounded" id="comment-area" name="comment-area" rows="5"
+                                  maxlength="500" placeholder="Yorumunuz"
+                                  style="background-color:rgb(224, 217, 217);"></textarea>
+
+                    </div>
+                    <div class="d-flex justify-content-end" style="background-color:rgb(224, 217, 217);height: 50px;">
+                        <button class="btn" id="gonder" type="button"
+                                style="background-color:rgb(0, 0, 0);color: white;width: 100px;height: 40px;">
+                            Gönder
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- Custom JQuery for Card Slider  -->
+<script>
+    var scrollPosition = 0;
+    var cardSlideIndex = 3;
+    var multipleCardCarousel = document.querySelector(
+        "#carouselExampleControls"
+    );
+    if (window.matchMedia("(min-width: 768px)").matches) {
+        //var carousel = new bootstrap.Carousel(multipleCardCarousel, {
+        //    interval: false,
+        //});
+
+        var carouselWidth = $(".mcontent .carousel-inner")[0].scrollWidth;
+        console.log("carouselWidth " + carouselWidth);
+        var cardWidth = $(".mcontent .carousel-item").width();
+        console.log("cardWidth " + cardWidth);
+
+        $("#carouselExampleControls .carousel-control-next").on("click", function () {
+            console.log("scrollPosition " + scrollPosition);
+            var count = (carouselWidth / cardWidth);
+            // if (scrollPosition < carouselWidth - cardWidth * 4) {
+            if (cardSlideIndex <= count) {
+                cardSlideIndex++;
+                scrollPosition += cardWidth;
+                $("#carouselExampleControls .carousel-inner").animate(
+                    { scrollLeft: scrollPosition },
+                    600
+                );
+            }
+        });
+        $("#carouselExampleControls .carousel-control-prev").on("click", function () {
+
+            //if (scrollPosition > 0) {
+            if (cardSlideIndex > 3) {
+                cardSlideIndex--;
+                scrollPosition -= cardWidth;
+                $("#carouselExampleControls .carousel-inner").animate(
+                    { scrollLeft: scrollPosition },
+                    600
+                );
+            }
+        });
+
+    }
+    else {
+        $(multipleCardCarousel).addClass("slide");
+    }
+</script>
+
+
+
+</html>
