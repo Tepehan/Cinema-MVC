@@ -144,6 +144,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\BiletAlController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\CastController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
