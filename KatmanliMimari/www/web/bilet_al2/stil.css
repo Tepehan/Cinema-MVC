@@ -1,0 +1,199 @@
+ 
+        .img-responsive {
+            display: block;
+            max-width: 100%;
+            height: 350px;
+            float: right;
+            padding-right: 5%;
+            border: 0;
+
+        }
+        .btn-bilet{
+            display: inline-block;
+            margin:0px 15px 0px 0px;
+            padding: 5px 70px;
+            font-weight: 400;
+            font-size: 17px;
+            font-family: Nunito, sans-serif;
+            border-radius: 4px;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            background-color:#fff;
+            border: 1px solid white;
+            color: black;
+        }
+        a.btn-bilet:hover {
+        background-color: #e6007e;
+        color: white;
+        border-color: #e6007e;
+        }
+
+        .btn-secondary{
+            display: inline-block;
+            margin:0px 15px 0px 0px;
+            padding: 5px 70px;
+            font-weight: 400;
+            font-size: 16px;
+            font-family: Nunito, sans-serif;
+            border-radius: 4px;
+            text-align: center;
+            text-decoration: none;
+            box-shadow: none;
+            border: none;
+            outline: none;
+            background-color:transparent; 
+            border: 1px solid white;
+            color: #fff;
+        }
+        a.btn-secondary:hover {
+        background-color: white;
+        color:black;
+        border-color: white;
+        }
+
+        .baslik {
+            position: relative;
+            padding-right: 70px;
+            margin-bottom: 20px;
+        }
+
+        .puanlama {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            font-size: 24px;
+            font-weight: 700;
+            color: #fff;
+            font-size: 22px;
+        }
+
+        .icon {
+            width: 25px;
+            height: 25px;
+            border: 1px solid white;
+            border-radius: 4px;
+            position: relative;
+            display: block;
+            float: left;
+            margin-right: 5px;
+            text-align: center;
+            line-height: 0;
+        }
+        a.icon:hover{
+            background-color:#e6007e ;
+        }
+        
+        .paylas {
+            float: right;
+            padding-left: 20px;
+            border-left: 1px solid rgba(255, 255, 255, 0.6);
+            margin-right: 0;
+        }
+        
+
+        .izlemekistiyorum {
+            float: right;
+            margin-right: 20px;
+        }
+
+
+        .puanla {
+            float: right;
+            margin-right: 20px;
+        }
+
+        .yorumlarioku {
+            margin-right: 15px;
+            float: right;
+        }
+        .filmbilgileri{
+            color: #fff; 
+            font-size: 15px; 
+            font-family: nunito sans-serif;
+            margin-top: 15px;
+        }
+
+        #brdr {
+            /* border: 1px solid red; */
+        }
+        #deneme{
+            overflow: hidden;
+            padding: 30px;
+          
+        }
+        #tonlama{
+            padding: 5px 5px 5px 5px;
+            margin: auto;
+            height: 440px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-color: transparent;         
+            opacity: 0.4;
+           
+        }
+
+        #ustarkadiv {
+            padding: 5px 5px 5px 5px;
+            margin: auto;
+            height: 440px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-image: url(https://media.cinemaximum.com.tr/255//Files/POSTER/ticket_to_paradise.jpg);
+            background-color:transparent; 
+             -webkit-filter: blur(12px);
+            filter: blur(12px);
+            margin: -35px -35px -35px -35px;
+           
+        }
+
+        /* tarayıcılarda responsive değil */
+        #ustondiv { 
+            /* border: 1px solid #f1f1f1; */
+            z-index: 1;
+            position: absolute;
+            top: 30%;
+            left: 51%;
+            transform: translate(-50%, -50%);
+            height: 450px;
+            padding-right: 10%;
+
+        }
+
+        #ustsol {
+            text-align: right;
+            /* border: 1px solid yellowgreen; */
+            height: 350px;
+        }
+
+
+        #ustsag {
+            /* border: 1px solid peru; */
+
+        }
+
+        #ustrow {
+            padding-top: 15px;
+            height: 0px;
+            display: block;
+        }
+
+        #altdiv {
+            /* border: 1px solid purple; */
+            padding: 5px 5px 5px 5px;
+            margin: 5px 5px 5px 5px;
+            height: 100px;
+        }
+
+        #altsol {
+            text-align: right;
+            padding-right: 10%;
+
+        }
+
+        #altsag {
+            text-align: left;
+
+        }
