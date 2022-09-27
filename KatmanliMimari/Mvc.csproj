@@ -2386,6 +2386,16 @@
     <Content Include="Scripts\umd\popper.min.js" />
     <Content Include="www\web\bilet\bilet.html" />
     <Content Include="www\web\bilet\stil.css" />
+    <Content Include="www\web\bilet_al2\bilet_al2.html" />
+    <Content Include="www\web\bilet_al2\resimler\bg-movie-roll-over.png" />
+    <Content Include="www\web\bilet_al2\resimler\gold_logo-01_new.png" />
+    <Content Include="www\web\bilet_al2\resimler\skybox_logo.png" />
+    <Content Include="www\web\bilet_al2\resimler\sky_auditorium_logo.png" />
+    <Content Include="www\web\bilet_al2\resimler\TRAİ_13+.svg.png" />
+    <Content Include="www\web\bilet_al2\resimler\TRAİ_Olumsuz_örnek.svg.png" />
+    <Content Include="www\web\bilet_al2\stil.css" />
+    <Content Include="www\web\bilet_al\bilet.html" />
+    <Content Include="www\web\bilet_al\bilet_al.html" />
     <Content Include="www\web\fontawesome-free-6.1.2-desktop\LICENSE.txt" />
     <Content Include="www\web\fontawesome-free-6.1.2-desktop\svgs\brands\42-group.svg" />
     <Content Include="www\web\fontawesome-free-6.1.2-desktop\svgs\brands\500px.svg" />
