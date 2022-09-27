@@ -33,7 +33,7 @@ namespace Business.Concrete
         }
         public Menu GetByIdBL(int id)
         {
-            return _menuDal.GetById(x => x.menuId == id);
+            return _menuDal.GetBy(x => x.menuId == id);
         }
         public List<Menu> ListBL()
         {

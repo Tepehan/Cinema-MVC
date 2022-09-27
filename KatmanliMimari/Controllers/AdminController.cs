@@ -24,7 +24,7 @@ namespace KatmanliMimari.Controllers
         [HttpPost]
         public ActionResult login(Admin admin) {
 
-            var sonuc = adminManager.Get(admin.kullaniciAd,admin.sifre);
+            var sonuc = adminManager.GetBy(admin.kullaniciAd,admin.sifre);
             if (sonuc != null) {
                 //set the logined admin toAuthCookie
                 FormsAuthentication.SetAuthCookie(sonuc.kullaniciAd,false);

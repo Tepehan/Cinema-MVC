@@ -30,7 +30,7 @@ namespace Business.Concrete
 
         public Slider getById(int id)
         {
-            return _sliderDal.GetById(x => x.sliderId == id);
+            return _sliderDal.GetBy(x => x.sliderId == id);
         }
 
         public void update(Slider slider)

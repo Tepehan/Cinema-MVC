@@ -15,7 +15,7 @@ namespace Business.Abstract
         List<Admin> Get();
         Admin GetById(int id);
 
-        Admin Get(string userName, string password);
+        Admin GetBy(string userName, string password);
 
     }
 }

@@ -37,7 +37,7 @@ namespace Business.Concrete
             throw new NotImplementedException();
         }
 
-        public Admin Get(string userName, string password)
+        public Admin GetBy(string userName, string password)
         {
            return _adminDal.GetBy(x=>x.kullaniciAd==userName && x.sifre == password);
         }
