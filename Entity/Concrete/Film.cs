@@ -45,6 +45,9 @@ namespace Entity.Concrete
 
         public ICollection<SalonFilm> salonFilms { get; set; }
 
+        //yorum ile ilişkilendiridi
+        public ICollection<Yorum> yorums { get; set; }
+
 
 
 

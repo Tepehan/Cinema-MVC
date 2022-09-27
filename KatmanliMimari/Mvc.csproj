@@ -152,6 +152,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SalonController.cs" />
     <Compile Include="Controllers\SalonFilmController.cs" />
+    <Compile Include="Controllers\SliderController.cs" />
     <Compile Include="Controllers\TurController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -2385,6 +2386,15 @@
     <Content Include="Scripts\umd\popper.min.js" />
     <Content Include="www\web\bilet\bilet.html" />
     <Content Include="www\web\bilet\stil.css" />
+    <Content Include="www\web\bilet_al2\bilet_al2.html" />
+    <Content Include="www\web\bilet_al2\resimler\bg-movie-roll-over.png" />
+    <Content Include="www\web\bilet_al2\resimler\gold_logo-01_new.png" />
+    <Content Include="www\web\bilet_al2\resimler\skybox_logo.png" />
+    <Content Include="www\web\bilet_al2\resimler\sky_auditorium_logo.png" />
+    <Content Include="www\web\bilet_al2\resimler\TRAİ_13+.svg.png" />
+    <Content Include="www\web\bilet_al2\resimler\TRAİ_Olumsuz_örnek.svg.png" />
+    <Content Include="www\web\bilet_al2\stil.css" />
+    <Content Include="www\web\bilet_al\bilet.html" />
     <Content Include="www\web\fontawesome-free-6.1.2-desktop\LICENSE.txt" />
     <Content Include="www\web\fontawesome-free-6.1.2-desktop\svgs\brands\42-group.svg" />
     <Content Include="www\web\fontawesome-free-6.1.2-desktop\svgs\brands\500px.svg" />
@@ -4405,19 +4415,20 @@
     <Content Include="www\web\fontawesome-free-6.1.2-desktop\svgs\solid\yin-yang.svg" />
     <Content Include="www\web\fontawesome-free-6.1.2-desktop\svgs\solid\z.svg" />
     <Content Include="www\web\index\cinemaximum_logo.svg" />
+    <Content Include="www\web\index\menustyle.css" />
     <Content Include="www\web\index\mjquery.js" />
     <Content Include="www\web\index\popper.min.js" />
-    <Content Include="www\web\index\slider\c1.jpg" />
-    <Content Include="www\web\index\slider\c10.png" />
-    <Content Include="www\web\index\slider\c2.jpg" />
-    <Content Include="www\web\index\slider\c3.jpg" />
-    <Content Include="www\web\index\slider\c4.jpg" />
-    <Content Include="www\web\index\slider\c5.jpg" />
-    <Content Include="www\web\index\slider\c6.jpg" />
-    <Content Include="www\web\index\slider\c7.jpg" />
-    <Content Include="www\web\index\slider\c7.png" />
-    <Content Include="www\web\index\slider\c8.png" />
-    <Content Include="www\web\index\slider\c9.jpg" />
+    <Content Include="www\web\index\slider\card\c1.jpg" />
+    <Content Include="www\web\index\slider\card\c10.png" />
+    <Content Include="www\web\index\slider\card\c2.jpg" />
+    <Content Include="www\web\index\slider\card\c3.jpg" />
+    <Content Include="www\web\index\slider\card\c4.jpg" />
+    <Content Include="www\web\index\slider\card\c5.jpg" />
+    <Content Include="www\web\index\slider\card\c6.jpg" />
+    <Content Include="www\web\index\slider\card\c7.jpg" />
+    <Content Include="www\web\index\slider\card\c7.png" />
+    <Content Include="www\web\index\slider\card\c8.png" />
+    <Content Include="www\web\index\slider\card\c9.jpg" />
     <Content Include="www\web\index\slider\s1.jpg" />
     <Content Include="www\web\index\slider\s2.jpg" />
     <Content Include="www\web\index\slider\s3.jpg" />
@@ -4506,6 +4517,10 @@
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Shared\NavbarLayout.cshtml" />
+    <Content Include="Views\Slider\Index.cshtml" />
+    <Content Include="Views\Slider\AddSlider.cshtml" />
+    <Content Include="Views\Slider\updateSlider.cshtml" />
+    <Content Include="tsconfig.json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

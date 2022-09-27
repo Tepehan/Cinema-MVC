@@ -61,11 +61,13 @@
     <Compile Include="Concrete\CastKadro.cs" />
     <Compile Include="Concrete\Film.cs" />
     <Compile Include="Concrete\FilmCastKadro.cs" />
+    <Compile Include="Concrete\Menu.cs" />
     <Compile Include="Concrete\Modals\HomeModal.cs" />
     <Compile Include="Concrete\Modals\SalonFilmModal.cs" />
     <Compile Include="Concrete\Modals\TurFilmModal.cs" />
     <Compile Include="Concrete\Musteri.cs" />
     <Compile Include="Concrete\Slider.cs" />
+    <Compile Include="Concrete\Yorum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Concrete\Salon.cs" />
     <Compile Include="Concrete\SalonFilm.cs" />
@@ -75,9 +77,6 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Content\PagedList.css" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

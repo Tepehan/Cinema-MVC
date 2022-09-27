@@ -65,5 +65,6 @@ namespace KatmanliMimari.Controllers
             turManager.UpdateBL(tur);
             return RedirectToAction("Index");
         }
+        //Bu bir yorum satırı
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Business.Concrete;
+using Business.Validators;
 using DataAccesLayer.Concrete.EntityFramework;
 using Entity.Concrete;
 using System;
@@ -21,8 +22,23 @@ namespace KatmanliMimari.Controllers
         [HttpPost]
         public ActionResult AddSalon(Salon salon)
         {
-            salonManagerBL.addBL(salon);
-            return RedirectToAction("Index");
+            SalonValidator validations = new SalonValidator();
+            var sonuc = validations.Validate(salon);
+
+            if (sonuc.IsValid)
+            {
+                salonManagerBL.addBL(salon);
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                foreach (var item in sonuc.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+            }
+            return View();
+
         }
         [HttpGet]
         public ActionResult AddSalon()

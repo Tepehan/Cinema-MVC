@@ -32,6 +32,10 @@ namespace Entity.Concrete
         //salonfimler(seanslar) ile ilişkilendirilecek!!!
 
         public ICollection<SalonFilmMusteri> salonFilmMusteris { get; set; }
+
+        //yorum ile ilişkilendiridi
+        public ICollection<Yorum>yorums { get; set; }
+
     }
 }
 

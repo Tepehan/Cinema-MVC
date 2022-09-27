@@ -21,5 +21,7 @@ namespace DataAccesLayer
         public DbSet<Tur> turler { get; set; }
         public DbSet<Admin> adminler { get; set; }
         public DbSet<Slider> sliderlar { get; set; }
+        public DbSet<Menu> menuler { get; set; }
+
     }
 }

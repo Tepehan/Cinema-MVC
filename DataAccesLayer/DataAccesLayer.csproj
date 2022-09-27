@@ -55,6 +55,7 @@
     <Compile Include="Abstract\ICastKadroDal.cs" />
     <Compile Include="Abstract\IFilmCastKadroDal.cs" />
     <Compile Include="Abstract\IFilmDal.cs" />
+    <Compile Include="Abstract\IMenuDal.cs" />
     <Compile Include="Abstract\IMusteriDal.cs" />
     <Compile Include="Abstract\IRepositoryDal.cs" />
     <Compile Include="Abstract\ISalonDal.cs" />
@@ -66,6 +67,7 @@
     <Compile Include="Concrete\EntityFramework\EfCastKadroDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfFilmCastKadroDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfFilmDal.cs" />
+    <Compile Include="Concrete\EntityFramework\EfMenuDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfMusteriDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfSalonDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfSalonFilmDal.cs" />
@@ -74,18 +76,6 @@
     <Compile Include="Concrete\EntityFramework\EfTurDal.cs" />
     <Compile Include="Concrete\Repositories\GenericRepository.cs" />
     <Compile Include="Context.cs" />
-    <Compile Include="Migrations\202209061050478_added_admin_table_mig.cs" />
-    <Compile Include="Migrations\202209061050478_added_admin_table_mig.designer.cs">
-      <DependentUpon>202209061050478_added_admin_table_mig.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202209061055025_added_admin_table_mig1.cs" />
-    <Compile Include="Migrations\202209061055025_added_admin_table_mig1.designer.cs">
-      <DependentUpon>202209061055025_added_admin_table_mig1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202209140858143_sliders.cs" />
-    <Compile Include="Migrations\202209140858143_sliders.designer.cs">
-      <DependentUpon>202209140858143_sliders.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -99,17 +89,7 @@
       <Name>EntityLayer</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202209061050478_added_admin_table_mig.resx">
-      <DependentUpon>202209061050478_added_admin_table_mig.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202209061055025_added_admin_table_mig1.resx">
-      <DependentUpon>202209061055025_added_admin_table_mig1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202209140858143_sliders.resx">
-      <DependentUpon>202209140858143_sliders.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

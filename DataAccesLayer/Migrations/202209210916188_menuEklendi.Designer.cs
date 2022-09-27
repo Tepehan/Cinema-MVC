@@ -7,13 +7,13 @@ namespace DataAccesLayer.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class sliders : IMigrationMetadata
+    public sealed partial class menuEklendi : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(sliders));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(menuEklendi));
         
         string IMigrationMetadata.Id
         {
-            get { return "202209140858143_sliders"; }
+            get { return "202209210916188_menuEklendi"; }
         }
         
         string IMigrationMetadata.Source
