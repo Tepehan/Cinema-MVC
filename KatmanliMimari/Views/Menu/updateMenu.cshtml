@@ -1,0 +1,35 @@
+﻿@using Entity.Concrete
+@model Menu
+@{
+    ViewBag.Title = "updateMenu";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>Menü Güncelle</h2>
+@using (Html.BeginForm("updateMenu", "Menu", FormMethod.Post, new
+{ @class = "form-group" }))
+{@Html.HiddenFor(x => x.menuId);
+@Html.Label("Menü Adı")
+<br />
+@Html.TextBoxFor(x => x.menuName, new { @class = "form-control" })
+<div id="menuName" class="validation-container">
+    <!-- @Html.ValidationMessageFor(x => x.menuName)-->
+</div>
+@Html.Label("parentId")
+<br />
+@Html.TextBoxFor(x => x.parentId, new { @class = "form-control" })
+<div id="parentId" class="validation-container">
+    <!-- @Html.ValidationMessageFor(x => x.parentId)-->
+</div>
+<br />
+@Html.Label("Durum")
+<br />
+<select name="durum" class="form-control">
+    <option value=true>True</option>
+    <option value=false>False</option>
+</select>
+<br />
+
+<input type="submit" value="Ekle" class="form-control bg-fuchsia mt-5" />
+}
+

@@ -151,6 +151,7 @@
     <Compile Include="Controllers\FilmCastKadroController.cs" />
     <Compile Include="Controllers\FilmController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Controllers\SalonController.cs" />
     <Compile Include="Controllers\SalonFilmController.cs" />
     <Compile Include="Controllers\SliderController.cs" />
@@ -4524,6 +4525,9 @@
     <Content Include="Views\Slider\AddSlider.cshtml" />
     <Content Include="Views\Slider\updateSlider.cshtml" />
     <Content Include="tsconfig.json" />
+    <Content Include="Views\Menu\AddMenu.cshtml" />
+    <Content Include="Views\Menu\Index.cshtml" />
+    <Content Include="Views\Menu\updateMenu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
