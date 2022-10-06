@@ -4,13 +4,14 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace DataAccesLayer.Concrete.Repositories
 {
     public class GenericRepository<T> : IRepositoryDal<T> where T:class  //kısıtlama koyduk
     {
+        
+
         Context context = new Context();
         DbSet<T> _object;
         public GenericRepository()
@@ -19,7 +20,6 @@ namespace DataAccesLayer.Concrete.Repositories
         }
         public void Delete(T p)
         {
-           
             var deletedItem = context.Entry(p);
             deletedItem.State = EntityState.Deleted;
             // _object.Remove(p);
