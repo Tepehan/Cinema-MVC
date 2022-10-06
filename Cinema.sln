@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.960
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mvc", "KatmanliMimari\Mvc.csproj", "{5B4589CC-8F5E-4BAE-87EB-C892FB3085F0}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "Business\BusinessLayer.csproj", "{5C0987E6-0FA0-4870-B21E-A9D98BC3707D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccesLayer", "DataAccesLayer\DataAccesLayer.csproj", "{267E8EAF-6DB0-4909-B3FE-2B5740B55571}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi\WebApi.csproj", "{CA7F751E-05BC-45FC-846C-18AC0A3A8112}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{267E8EAF-6DB0-4909-B3FE-2B5740B55571}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{267E8EAF-6DB0-4909-B3FE-2B5740B55571}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{267E8EAF-6DB0-4909-B3FE-2B5740B55571}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA7F751E-05BC-45FC-846C-18AC0A3A8112}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA7F751E-05BC-45FC-846C-18AC0A3A8112}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA7F751E-05BC-45FC-846C-18AC0A3A8112}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA7F751E-05BC-45FC-846C-18AC0A3A8112}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
