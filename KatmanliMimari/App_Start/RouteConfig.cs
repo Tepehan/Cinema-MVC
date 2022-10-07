@@ -12,20 +12,17 @@ namespace KatmanliMimari
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-
+            routes.MapRoute(
+                name: "FilmDetail",
+                url: "{controller}/film/{id}",
+                defaults: new { controller = "BiletAl", action = "GetById", id = UrlParameter.Optional }
+            );
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
-
-            routes.MapRoute(
-                name: "FilmDetail",
-                url: "{controller}/film/{seo}",
-                defaults: new { controller = "BiletAl", action = "GetById", seo = UrlParameter.Optional}
-            );
-
-
+            
         }
     }
 }

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Ticket</title>
+</head>
+
+<body>
+    <!-- ana div -->
+    <div class="bg">
+
+        <div class="row arkaplan" id="ustarkadiv"> <!-- arkaplan başlangıç div -->
+            
+            <img id="tonlama" src="resimler/bg-movie-roll-over.png">
+        </div> <!-- arkaplan sonu div -->
+
+
+        <!-- icerik -->
+        <div class="front">
+            <div class="row d-flex justify-content-center">
+                <div class="col-sm-4 d-flex  justify-content-sm-end">
+                    <img class="img-responsive" src="ticket_to_paradise1.jpg">
+                </div>
+                <div class="col-sm-8 justify-content-center">
+                    <div class="row">
+                        <div class="izlemekistiyorum col-sm-3">
+                            <a href="" id="" class="icon">
+                                <i class="bi bi-heart-fill" style="color: white; position: relative; top: 3px;"></i>
+                            </a>
+                            <span
+                                style="margin-top: 3px;color: white; font-size: 13px; font-family: nunito sans-serif;">İzlemek
+                                İstiyorum</span>
+                        </div>
+
+                        <div class="puanla col-sm-3">
+                            <a href="" class="icon">
+                                <i class="bi bi-star-fill" style="color: white; position: relative; top: 3px;"></i>
+
+                            </a>
+                            <span
+                                style="margin-top: 3px;color: white ;font-size: 13px; font-family: nunito sans-serif;">Puanla</span>
+                        </div>
+
+                        <div class="yorumlarioku col-sm-3">
+                            <a href="#comments" id="commentBtn" class="icon">
+                                <i class="bi bi-chat-fill" style="color: white;position: relative; top: 3px;"></i>
+                            </a>
+                            <span
+                                style="margin-top: 3px;color: white; font-size: 13px; font-family: nunito sans-serif;">Yorumları
+                                Oku</span>
+                        </div>
+                        <div class="col-sm-3">
+                            <span
+                                style="margin-right:5px; margin-top: 3px;color: white; font-size: 13px; font-family: nunito sans-serif; float: left;">Paylaş:
+                            </span>
+                            <a href="" class="icon">
+                                <i class="bi bi-facebook" style="color: white; position: relative; top: 3px;"></i>
+
+                            </a>
+                            <a href="" class="icon">
+                                <i class="bi bi-twitter" style="color: white; position: relative; top: 3px;"></i>
+
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="baslik">
+                        <h1 style="font-size: 36px; font-weight: 200; margin: 5px 0 3px 0;
+                    line-height: 100%;   color: #fff;">Cennete Bilet</h1>
+                    </div>
+                    <div>
+                        <h3 style="font-size: 18px; font-weight: 200; color: #fff; line-height: 100%; margin: 0;">
+                            Ticket to
+                            Paradise</h3>
+                    </div>
+                    <div
+                        style="position:relative; top:10px; border-style: solid none solid none; border-color: white; border-width: 1px;">
+                        <img src="resimler/gold_logo-01_new.png" width="110px;" height="40px;">
+                        <img src="resimler/sky_auditorium_logo.png" width="70px;" height="40px;">
+                        <img src="resimler/skybox_logo.png" width="90px;" height="40px;">
+                    </div>
+                    <div class="movie-warnings">
+                        <img style="margin-top: 30px;" src="resimler/TRA_13+.svg.png" width="28px;" height="28px;">
+                        <img style="margin-top: 30px; position: relative; left:5px;"
+                            src="resimler/TRA_Olumsuz_rnek.svg.png" width="28px;" height="28px;">
+
+                    </div>
+                    <div class="filmbilgileri">
+                        <p>
+                            <strong>Yönetmen:</strong> Ol Parker <br>
+                            <strong>Oyuncular:</strong> George Clooney, Kaitlyn Dever, Julia Roberts
+                        </p>
+                        <p><strong>Formatlar:</strong> 2D, GoldClass, Sky Auditorium, Skybox, Starium,
+                            Altyazılı</p>
+                    </div>
+                    <div class="row p-3 justify-content-center">
+                        <a href="#" class="btn-bilet col-sm-3">Bilet Al</a>
+                        <a href="#" class="btn-secondary col-sm-3">Fragman</a>
+                        <a href="#" class="btn-secondary col-sm-3">Yorum Yap</a>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div> <!-- icerik sonu -->
+
+
+        <div class="row" id="altdiv"> <!-- alt div baslangic -->
+           
+
+            <div id="altsol" class="col-md-4">
+                <div><strong>Vizyon Tarihi:</strong> 16.09.2022</div>
+                <div><strong>Süre:</strong> 104 Dakika</div>
+                <div><strong>Tür:</strong> Romantik Komedi</div>
+            </div>
+
+
+            <div id="altsag" class="col-md-8">
+                <p><strong>Özet <span class="hidden-xs">:</span></strong> Ticket to Paradise, evlenmek üzere olan
+                    kızlarına mani olmak için birbirileri arasındaki anlaşmazlıkları arkalarında bırakarak birlikte
+                    hareket eden boşanmış bir çiftin hikâyesini anlatıyor.</p>
+            </div>
+        </div> <!-- alt div sonu -->
+
+    </div>
+    <!-- ana div sonu -->
+
+
+
+</body>
+
+</html>

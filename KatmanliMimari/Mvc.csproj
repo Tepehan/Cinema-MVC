@@ -2386,14 +2386,16 @@
     <Content Include="Scripts\umd\popper.min.js" />
     <Content Include="www\web\bilet\bilet.html" />
     <Content Include="www\web\bilet\stil.css" />
-    <Content Include="www\web\bilet_al2\bilet_al2.html" />
+    <Content Include="www\web\bilet_al2\index.html" />
     <Content Include="www\web\bilet_al2\resimler\bg-movie-roll-over.png" />
     <Content Include="www\web\bilet_al2\resimler\gold_logo-01_new.png" />
+    <Content Include="www\web\bilet_al2\resimler\movie-header-overlay.png" />
     <Content Include="www\web\bilet_al2\resimler\skybox_logo.png" />
     <Content Include="www\web\bilet_al2\resimler\sky_auditorium_logo.png" />
-    <Content Include="www\web\bilet_al2\resimler\TRAİ_13+.svg.png" />
-    <Content Include="www\web\bilet_al2\resimler\TRAİ_Olumsuz_örnek.svg.png" />
-    <Content Include="www\web\bilet_al2\stil.css" />
+    <Content Include="www\web\bilet_al2\resimler\arti13.png" />
+    <Content Include="www\web\bilet_al2\resimler\TRA_Olumsuz_rnek.svg.png" />
+    <Content Include="www\web\bilet_al2\biletal2.css" />
+    <Content Include="www\web\bilet_al2\demo.jpg" />
     <Content Include="www\web\bilet_al\bilet.html" />
     <Content Include="www\web\bilet_al\bilet_al.html" />
     <Content Include="www\web\fontawesome-free-6.1.2-desktop\LICENSE.txt" />
@@ -4526,11 +4528,11 @@
     <Content Include="Views\Menu\AddMenu.cshtml" />
     <Content Include="Views\Menu\Index.cshtml" />
     <Content Include="Views\Menu\updateMenu.cshtml" />
+    <Content Include="Views\BiletAl\GetById.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\deneme\" />
     <Folder Include="Views\KayıtOl\" />
   </ItemGroup>
   <ItemGroup>

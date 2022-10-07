@@ -12,6 +12,7 @@ using System.Web.Mvc;
 
 namespace KatmanliMimari.Controllers
 {
+    
     public class HomeController : Controller
     {
         Context _context = new Context();

@@ -114,7 +114,7 @@
     <div class="container">
         <!-- bilet al div başlangıcı -->
         <div id="biletal" class="container p-4"
-            style="color: #fff;background-image: linear-gradient(to bottom left,#e6007e,#e6007e,rgb(209, 13, 13)); border-radius: 10px;margin: auto;">
+             style="color: #fff;background-image: linear-gradient(to bottom left,#e6007e,#e6007e,rgb(209, 13, 13)); border-radius: 10px;margin: auto;">
             <div>
                 <div class="row d-flex justify-content-center">
                     <div class="col-sm-2 ">
@@ -129,7 +129,7 @@
                     <div class="col-sm-6 mobile-margin visible-xs">
                         <div class="dropdown">
                             <button class="btn dropdown-toggle w-100" type="button" data-bs-toggle="dropdown"
-                                style="background-image: linear-gradient(to bottom left,#e6007e,#e6007e);border: none;border-bottom:3px solid #fff;color:white;">
+                                    style="background-image: linear-gradient(to bottom left,#e6007e,#e6007e);border: none;border-bottom:3px solid #fff;color:white;">
                                 Sinema Seç
                             </button>
                             <ul class="dropdown-menu ">
@@ -164,7 +164,7 @@
                                 <h5 class="card-title">Bugün</h5>
                                 <span> </span>
                                 <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                            card's content.</p> -->
+                                card's content.</p> -->
 
                             </div>
                         </div>
@@ -176,7 +176,7 @@
                                 <h5 class="card-title">25 Eylül</h5>
                                 <span>Cuma</span>
                                 <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                            card's content.</p> -->
+                                card's content.</p> -->
                             </div>
                         </div>
                     </div>
@@ -187,7 +187,7 @@
                                 <h5 class="card-title">24 Eylül</h5>
                                 <span>Cumartesi</span>
                                 <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                            card's content.</p> -->
+                                card's content.</p> -->
                             </div>
                         </div>
                     </div>
@@ -198,19 +198,19 @@
                                 <h5 class="card-title">26 Eylül</h5>
                                 <span>Pazar</span>
                                 <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                            card's content.</p> -->
+                                card's content.</p> -->
                             </div>
                         </div>
                     </div>
 
                 </div>
                 <button class="carousel-control-prev" style="background-color:#dc3545;" type="button"
-                    data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                        data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
                 <button class="carousel-control-next" style="background-color:#dc3545;" type="button"
-                    data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                        data-bs-target="#carouselExampleControls" data-bs-slide="next">
                     <span class="carousel-control-next-icon data-bs-ride" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
@@ -222,16 +222,19 @@
 
         <div id="gizlenebilir">
             <div id="" class="d-flex container mt-3 rounded justify-content-end p-4"
-                style="background-image: linear-gradient(to bottom left,#e6007e,#e6007e,rgb(209, 13, 13));">
-                <div class="d-flex justify-content-center col-10"><span class="text-light">Cinemaximum Akasya</span>
+                 style="background-image: linear-gradient(to bottom left,#e6007e,#e6007e,rgb(209, 13, 13));">
+                <div class="d-flex justify-content-center col-10">
+                    <span class="text-light">Cinemaximum Akasya</span>
                 </div>
-                <div class="d-flex col-2  justify-content-end"><button type="button" class="btn-close btn-close-white"
-                        onclick="$('#gizlenebilir').toggle(function(){
+                <div class="d-flex col-2  justify-content-end">
+                    <button type="button" class="btn-close btn-close-white"
+                            onclick="$('#gizlenebilir').toggle(function(){
                 $(this).animate({'height': '0px'}, 100);
             }, function(){
                 $(this).animate({'height': '0px'}, 100);
             });
-               "></button></div>
+               "></button>
+                </div>
             </div>
             <br>
 
@@ -249,22 +252,23 @@
         </div>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-6" style="border-bottom: black solid 1px;height: 160px;">
+                <div class="col-sm-6" style="border-bottom: black solid 1px;height: 160px;">
                     <p id="yorum" class="mt-5">Yorumlar</p>
                     <span>İlk yorumu sen yaz!</span>
                 </div>
-                <div class="col-6">
+                <div class="col-sm-6">
                     <p id="yorum" class="mt-5">Yorum Yaz</p>
                     <div class="input-group" id="textarea">
-
                         <textarea class="form-control rounded" id="comment-area" name="comment-area" rows="5"
-                            maxlength="500" placeholder="Yorumunuz"
-                            style="background-color:rgb(224, 217, 217);"></textarea>
+                                  maxlength="500" placeholder="Yorumunuz"
+                                  style="background-color:rgb(224, 217, 217);"></textarea>
 
                     </div>
                     <div class="d-flex justify-content-end" style="background-color:rgb(224, 217, 217);height: 50px;">
                         <button class="btn" id="gonder" type="button"
-                            style="background-color:rgb(0, 0, 0);color: white;width: 100px;height: 40px;">Gönder</button>
+                                style="background-color:rgb(0, 0, 0);color: white;width: 100px;height: 40px;">
+                            Gönder
+                        </button>
                     </div>
                 </div>
 

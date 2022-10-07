@@ -3,6 +3,196 @@
     ViewBag.Title = "GetById";
     Layout = "~/Views/Shared/NavbarLayout.cshtml";
 }
+<!-- Custom CSS  for Menu -->
+<link href="~/www/web/index/menustyle.css" rel="stylesheet" />
 
-<h2>GetById</h2>
+<!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet" />
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,700&display=swap"
+      rel="stylesheet" />
+<!-- MDB -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css"
+      rel="stylesheet" />
+<!-- MDB -->
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"></script>
+<!-- Custom CSS  for Card biletal -->
 
+
+<link href="~/www/web/bilet_al2/biletal2.css" rel="stylesheet" />
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+
+<!--Main-->
+<div class="main">
+    <div class="resimArkaPlan">
+        <img class="tonlama" src="~/www/web/bilet_al2/resimler/movie-header-overlay.png" />
+    </div>
+    <!--ALL CONTENT-->
+    <div class="allContent row">
+        <!--Leftside <Film Image>-->
+        <div class="filmImg col-sm-3 d-flex justify-content-end">
+            <img class="img-fluid" src="~/www/web/bilet_al2/demo.jpg" />
+        </div>
+        <!--Leftside End<Film Image>-->
+        <!--Rightside <Contents>-->
+        <div class="content col-sm-9 ">
+            <div class="contentChildDiv w-75">
+                <div class="iconAndText row justify-content-end">
+                    <div class="col-sm-2"> <i class="icns bi bi-chat-fill col-sm"></i> Yorumları oku</div>
+                    <div class="col-sm-2"> <i class="icns bi bi-star-fill col-sm"></i> Puanla</div>
+                    <div class="col-sm-2"> <i class="icns bi bi-heart-fill col-sm"></i> İzlemek istiyorum</div>
+                    <div class="col-sm-1"> <span>|</span></div>
+                    <div class="col-sm-2">Paylaş  <i class="icns bi bi-facebook col-sm"></i> <i class="icns bi bi-twitter col-sm"></i></div>
+
+
+                </div>
+                <div class="baslik">Avatar</div>
+
+                <div class="tekn line">
+                    <i class="icns bi bi-heart-fill col-sm"></i>
+                </div>
+                <div class="kitle line">  <i class="icns bi bi-heart-fill col-sm"></i>  <i class="icns bi bi-heart-fill col-sm"></i>  <i class="icns bi bi-heart-fill col-sm"></i></div>
+                <div class="yonetmen"><span>Yönetmen : Ol Parker</span></div>
+                <div class="oyuncular"><span>Oyuncular : George Clooney, Kaitlyn Dever, Julia Roberts</span></div>
+                <div class="formatlar"><span>Formatlar: 2D, ScreenX, Altyazılı</span></div>
+                <div class="row w-100 mt-5">
+                    <div class="col-sm-4"><button type="button" class="d-flex justify-content-center w-100 btn-bilet">Bilet Al</button></div>
+                    <div class="col-sm-4"><button type="button" class="d-flex justify-content-center w-100 btn-secondary">Fragman</button></div>
+                    <div class="col-sm-4"><button type="button" class="d-flex justify-content-center w-100 btn-secondary">Yorum Yap</button></div>
+                </div>
+            </div>
+           
+        </div>
+        <!--Rightside End<Contents>-->
+    </div>
+    <!--ALL CONTENT END-->
+</div>
+<!--Main End-->
+<!-- ana div -->
+<!--<div class="bg">
+
+    <div class="row arkaplan" id="ustarkadiv">-->
+<!-- arkaplan başlangıç div -->
+<!--<img id="tonlama" src="~/www/web/bilet_al2/resimler/bg-movie-roll-over.png">
+</div>-->
+ <!-- arkaplan sonu div -->
+<!-- icerik -->
+<!--<div class="front">
+    <div class="row d-flex justify-content-center">
+        <div class="col-sm-4 d-flex  justify-content-sm-end">
+            <img class="img-responsive" src="~/www/web/bilet_al2/ticket_to_paradise1.jpg">
+        </div>
+        <div class="col-sm-8 justify-content-center">
+            <div class="row">
+                <div class="izlemekistiyorum col-sm-3">
+                    <a href="" id="" class="icon">
+                        <i class="bi bi-heart-fill" style="color: white; position: relative; top: 3px;"></i>
+                    </a>
+                    <span style="margin-top: 3px;color: white; font-size: 13px; font-family: nunito sans-serif;">
+                        İzlemek
+                        İstiyorum
+                    </span>
+                </div>
+
+                <div class="puanla col-sm-3">
+                    <a href="" class="icon">
+                        <i class="bi bi-star-fill" style="color: white; position: relative; top: 3px;"></i>
+
+                    </a>
+                    <span style="margin-top: 3px;color: white ;font-size: 13px; font-family: nunito sans-serif;">Puanla</span>
+                </div>
+
+                <div class="yorumlarioku col-sm-3">
+                    <a href="#comments" id="commentBtn" class="icon">
+                        <i class="bi bi-chat-fill" style="color: white;position: relative; top: 3px;"></i>
+                    </a>
+                    <span style="margin-top: 3px;color: white; font-size: 13px; font-family: nunito sans-serif;">
+                        Yorumları
+                        Oku
+                    </span>
+                </div>
+                <div class="col-sm-3">
+                    <span style="margin-right:5px; margin-top: 3px;color: white; font-size: 13px; font-family: nunito sans-serif; float: left;">
+                        Paylaş:
+                    </span>
+                    <a href="" class="icon">
+                        <i class="bi bi-facebook" style="color: white; position: relative; top: 3px;"></i>
+
+                    </a>
+                    <a href="" class="icon">
+                        <i class="bi bi-twitter" style="color: white; position: relative; top: 3px;"></i>
+
+                    </a>
+                </div>
+            </div>
+
+            <div class="baslik">
+                <h1 style="font-size: 36px; font-weight: 200; margin: 5px 0 3px 0;
+                line-height: 100%;   color: #fff;">
+                    Cennete Bilet
+                </h1>
+            </div>
+            <div>
+                <h3 style="font-size: 18px; font-weight: 200; color: #fff; line-height: 100%; margin: 0;">
+                    Ticket to
+                    Paradise
+                </h3>
+            </div>
+            <div style="position:relative; top:10px; border-style: solid none solid none; border-color: white; border-width: 1px;">
+                <img src="~/www/web/bilet_al2/resimler/gold_logo-01_new.png" width="110px;" height="40px;">
+                <img src="~/www/web/bilet_al2/resimler/sky_auditorium_logo.png" width="70px;" height="40px;">
+                <img src="~/www/web/bilet_al2/resimler/skybox_logo.png" width="90px;" height="40px;">
+            </div>
+            <div class="movie-warnings">
+
+                <img style="margin-top: 30px;" src="~/www/web/bilet_al2/resimler/arti13.png" width="28px;" height="28px;">
+                <img style="margin-top: 30px; position: relative; left:5px;"
+                     src="~/www/web/bilet_al2/resimler/TRA_Olumsuz_rnek.svg.png" width="28px;" height="28px;">
+
+            </div>
+            <div class="filmbilgileri">
+                <p>
+                    <strong>Yönetmen:</strong> Ol Parker <br>
+                    <strong>Oyuncular:</strong> George Clooney, Kaitlyn Dever, Julia Roberts
+                </p>
+                <p>
+                    <strong>Formatlar:</strong> 2D, GoldClass, Sky Auditorium, Skybox, Starium,
+                    Altyazılı
+                </p>
+            </div>
+            <div class="row p-3 justify-content-center">
+                <a href="#" class="btn-bilet col-sm-3">Bilet Al</a>
+                <a href="#" class="btn-secondary col-sm-3">Fragman</a>
+                <a href="#" class="btn-secondary col-sm-3">Yorum Yap</a>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>-->
+ <!-- icerik sonu -->
+<!--<div class="row" id="altdiv">-->
+<!-- alt div baslangic -->
+<!--<div id="altsol" class="col-md-4">
+        <div><strong>Vizyon Tarihi:</strong> 16.09.2022</div>
+        <div><strong>Süre:</strong> 104 Dakika</div>
+        <div><strong>Tür:</strong> Romantik Komedi</div>
+    </div>
+
+
+    <div id="altsag" class="col-md-8">
+        <p>
+            <strong>Özet <span class="hidden-xs">:</span></strong> Ticket to Paradise, evlenmek üzere olan
+            kızlarına mani olmak için birbirileri arasındaki anlaşmazlıkları arkalarında bırakarak birlikte
+            hareket eden boşanmış bir çiftin hikâyesini anlatıyor.
+        </p>
+    </div>
+</div>-->
+ <!-- alt div sonu -->
+<!--</div>-->
+<!-- ana div sonu -->

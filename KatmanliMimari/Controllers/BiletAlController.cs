@@ -10,7 +10,8 @@ using System.Web.Mvc;
 using System.Web.Security;
 
 namespace KatmanliMimari.Controllers
-{  
+{
+    [AllowAnonymous]
     public class BiletAlController : Controller
     {
         FilmManagerBL _filmManager = new FilmManagerBL(new EfFilmDal());
