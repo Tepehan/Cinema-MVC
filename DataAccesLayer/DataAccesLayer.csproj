@@ -144,6 +144,10 @@
     <Compile Include="Concrete\EntityFramework\EfTurDal.cs" />
     <Compile Include="Concrete\Repositories\GenericRepository.cs" />
     <Compile Include="Context.cs" />
+    <Compile Include="Migrations\202210071016313_films_added_seoUrl.cs" />
+    <Compile Include="Migrations\202210071016313_films_added_seoUrl.designer.cs">
+      <DependentUpon>202210071016313_films_added_seoUrl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -156,6 +160,11 @@
       <Project>{05848fb9-a00a-4286-929c-5f8170dbaffb}</Project>
       <Name>EntityLayer</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202210071016313_films_added_seoUrl.resx">
+      <DependentUpon>202210071016313_films_added_seoUrl.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

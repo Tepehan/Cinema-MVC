@@ -33,6 +33,9 @@ namespace Entity.Concrete
 
         public bool durum { get; set; }
 
+        [StringLength(200)]
+        public string seoUrl { get; set; }
+
         //turler ile ilişkilendirilecek!!!
         //salonfilmler ile ilişkilendirilecek(seanslar)!!!
         //castKadro ile ilişkilendirilecek!!!

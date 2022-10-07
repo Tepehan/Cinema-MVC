@@ -26,12 +26,17 @@ namespace Business.Concrete
 
         public void DeleteBL(Film film)
         {
-            _filmDal.Delete(film); 
+            _filmDal.Delete(film);
         }
 
         public Film GetByIdBL(int id)
         {
             return _filmDal.GetBy(x => x.filmId == id);
+        }
+
+        public Film GetBySeoBl(string seo)
+        {
+            return _filmDal.GetBy(x => x.seoUrl == seo);
         }
 
         public List<Film> GetListByFilmBL(string filmAdi)
@@ -41,7 +46,7 @@ namespace Business.Concrete
 
         public List<Film> GetListByTurBL(int id)
         {
-            return _filmDal.List(x=>x.turId==id);
+            return _filmDal.List(x => x.turId == id);
         }
 
         public List<Film> ListBL()
@@ -51,7 +56,7 @@ namespace Business.Concrete
 
         public void UpdateBL(Film film)
         {
-             _filmDal.Update(film);
+            _filmDal.Update(film);
         }
     }
 }

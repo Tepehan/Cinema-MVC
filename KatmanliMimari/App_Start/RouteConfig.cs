@@ -18,11 +18,14 @@ namespace KatmanliMimari
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
             routes.MapRoute(
                 name: "FilmDetail",
-                url: "{controller}/{seo}/{value}",
-                defaults: new { controller = "BiletAl", action = "GetById", value = UrlParameter.Optional }
+                url: "{controller}/film/{seo}",
+                defaults: new { controller = "BiletAl", action = "GetById", seo = UrlParameter.Optional}
             );
+
+
         }
     }
 }

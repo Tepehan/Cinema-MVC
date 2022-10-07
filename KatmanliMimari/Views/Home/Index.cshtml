@@ -132,11 +132,10 @@
                     <div class='secondDiv border'>
                         <div>
                             <div class="p-2 text-white">@Model.filmModal.ElementAt(0).destekledigiTeknolojiler</div>
-                            <a href="~/BiletAl/GetById/@Model.filmModal.ElementAt(0).filmId" role="button" class="btn btn-light d-block w-100">Yorum Yap</a>
+                            <a href="~/BiletAl/film/@Model.filmModal.ElementAt(0).seoUrl" role="button" class="btn btn-light d-block w-100">Yorum Yap</a>
                             <div class="p-2"></div>
-                            <a href="~/BiletAl/GetById/@Model.filmModal.ElementAt(0).filmId" role="button" class="btn btn-light d-block w-100">Bilet Al</a>
-                       <div>deneneme @Html.ActionLink("BiletAl", "GetById",new {id= @Model.filmModal.ElementAt(0).filmId},new {@class="btn btn - light d - block w - 100" })</div>
-                        </div>
+                            <a href="~/BiletAl/film/@Model.filmModal.ElementAt(0).seoUrl" role="button" class="btn btn-light d-block w-100">Bilet Al</a>
+                      
 
                     </div>
                     <div class="img-wrapper"><img src="~/www/web/index/slider/card/@Model.filmModal.ElementAt(0).afisUrl" class="d-block w-100" alt="..."> </div>
@@ -156,9 +155,9 @@
                         <div class='secondDiv border'>
                             <div>
                                 <div class="p-2 text-white">@Model.filmModal.ElementAt(i).destekledigiTeknolojiler</div>
-                                <a href="~/BiletAl/GetById/@Model.filmModal.ElementAt(i).filmId" role="button" class="btn btn-light d-block w-100">Yorum Yap</a>
+                                <a href="~/BiletAl/film/@Model.filmModal.ElementAt(i).seoUrl" role="button" class="btn btn-light d-block w-100">Yorum Yap</a>
                                 <div class="p-2"></div>
-                                <a href="~/BiletAl/GetById/@Model.filmModal.ElementAt(i).filmId" role="button" class="btn btn-light d-block w-100">Bilet Al</a>
+                                <a href="~/BiletAl/film/@Model.filmModal.ElementAt(i).seoUrl" role="button" class="btn btn-light d-block w-100">Bilet Al</a>
                             </div>
 
                         </div>
@@ -167,7 +166,7 @@
                             <h6 class="card-title">@(Model.filmModal.ElementAt(i).filmIsim.Length >= 15 ? Model.filmModal.ElementAt(i).filmIsim.Substring(0, 13) + ".." : Model.filmModal.ElementAt(i).filmIsim)</h6>
                              @*<p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                             card's content.</p>*@ 
-                            <a href="~/BiletAl/GetById/@Model.filmModal.ElementAt(i).filmId" class="btn btn-danger">Detaylara Git</a>
+                            <a href="~/BiletAl/film/@Model.filmModal.ElementAt(i).seoUrl" class="btn btn-danger">Detaylara Git</a>
                         </div>
                     </div>
                 </div>
