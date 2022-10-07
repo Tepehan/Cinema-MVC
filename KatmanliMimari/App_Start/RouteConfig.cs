@@ -14,7 +14,7 @@ namespace KatmanliMimari
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
             routes.MapRoute(
                 name: "FilmDetail",
-                url: "{controller}/film/{seo}",
+                url: "bilet-satis/film/{seo}",
                 defaults: new { controller = "BiletAl", action = "GetById", seo = UrlParameter.Optional }
             );
             routes.MapRoute(
