@@ -19,7 +19,7 @@ namespace KatmanliMimari.Controllers
         // GET: BiletAl
         public ActionResult GetById(string seo)
         {
-            var film = _filmManager.GetByIdBL(seo);
+            var film = _filmManager.GetBySeoBl(seo);
             return View(film);
         }
         
