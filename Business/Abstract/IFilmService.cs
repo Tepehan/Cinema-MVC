@@ -16,6 +16,7 @@ namespace Business.Abstract
         List<Film> GetListByTurBL(int id);
         List<Film> GetListByFilmBL(string filmAdi);
         Film GetByIdBL(int id);
+        Film GetBySeoBl(string seo);
         
        
     }
