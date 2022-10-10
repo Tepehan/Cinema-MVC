@@ -26,12 +26,18 @@
     <div id="gosterimTarih" class="validation-container">
     </div>
     <br />
-    @Html.Label("Gösterim Günü")
+    @Html.Label("Gosterim Günü")
     <br />
-    @Html.TextBox("gosterimGun", "", new { @class = "form-control" })
-    <div id="gosterimGun" class="validation-container">
-    </div>
-    <br />
+    <select name="gosterimGun" class="form-control">
+        <option>Pazartesi</option>
+        <option>Salı</option>
+        <option>Çarşamba</option>
+        <option>Perşembe</option>
+        <option>Cuma</option>
+        <option>Cumartesi</option>
+        <option>Pazar</option>
+    </select>
+    <br/>
     @Html.Label("Salon Seç")
     <br />
     <select name="salonId" class="form-control">
