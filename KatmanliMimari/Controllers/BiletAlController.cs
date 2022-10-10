@@ -15,13 +15,16 @@ namespace KatmanliMimari.Controllers
     public class BiletAlController : Controller
     {
         FilmManagerBL _filmManager = new FilmManagerBL(new EfFilmDal());
+        SalonFilmManager salonFilmManager = new SalonFilmManager(new EfSalonFilmDal());
 
 
         // GET: BiletAl
         public ActionResult GetById(string seo)
         {
             var film = _filmManager.GetBySeoBl(seo);
-            return View(film);
+            var seanslar = salonFilmManager.getSeansByFilmId(film.filmId);
+
+            return View(seanslar);
         }
         
     }
