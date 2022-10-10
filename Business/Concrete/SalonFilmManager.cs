@@ -23,9 +23,18 @@ namespace Business.Concrete
             salonFilmDal.Insert(salonFilm);
         }
 
-        public SalonFilm getById(int id)
+        public SalonFilm getBySalonFilmId(int id)
         {
             return salonFilmDal.GetBy(x=>x.salonFilmlerId==id);
+        }
+
+        public List<SalonFilm> getSeansBySeoUrl(string seoUrl)
+        {
+            return salonFilmDal.List(x=>x.film.seoUrl== seoUrl);
+        }
+        public List<SalonFilm> getSeansByFilmId(int filmId)
+        {
+            return salonFilmDal.List(x => x.film.filmId == filmId);
         }
 
         public List<SalonFilm> list()
