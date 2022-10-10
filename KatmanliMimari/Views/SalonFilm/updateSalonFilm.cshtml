@@ -20,6 +20,18 @@
     <div id="gosterimSaat" class="validation-container">
     </div>
     <br />
+    @Html.Label("Gösterim Tarihi")
+    <br />
+    <input type="date" name="gosterimTarih" class="form-control m-1" onfocus="document.getElementById('date').style.display='none'" />
+    <div id="gosterimTarih" class="validation-container">
+    </div>
+    <br />
+    @Html.Label("Gösterim Günü")
+    <br />
+    @Html.TextBox("gosterimGun", "", new { @class = "form-control" })
+    <div id="gosterimGun" class="validation-container">
+    </div>
+    <br />
     @Html.Label("Salon Seç")
     <br />
     <select name="salonId" class="form-control">

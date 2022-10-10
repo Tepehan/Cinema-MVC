@@ -14,6 +14,12 @@ namespace Entity.Concrete
 
         [StringLength(20)]
         public string gosterimSaat { get; set; }
+
+        [StringLength(20)]
+        public string gosterimTarih { get; set; }
+
+        [StringLength(20)]
+        public string gosterimGun { get; set; }
         public bool durum { get; set; }
 
         public int salonId { get; set; }
