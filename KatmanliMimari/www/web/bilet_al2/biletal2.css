@@ -94,7 +94,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-image: url(https://media.cinemaximum.com.tr/255//Files/POSTER/ticket_to_paradise.jpg);
+    /* background-image: url(https://media.cinemaximum.com.tr/255//Files/POSTER/ticket_to_paradise.jpg);*/
     background-color: transparent;
     -webkit-filter: blur(12px);
     filter: blur(12px);
@@ -130,3 +130,4 @@
     }
 
 }
+
