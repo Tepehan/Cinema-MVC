@@ -11,8 +11,9 @@ namespace Business.Abstract
     {
         List<SalonFilm> list();
         void addBL(SalonFilm salonFilm);
-
-        SalonFilm getById(int id);
         void update(SalonFilm sf);
+        SalonFilm getBySalonFilmId(int id);
+        List<SalonFilm> getSeansBySeoUrl(string seoUrl);
+        List<SalonFilm> getSeansByFilmId(int filmId);
     }
 }
