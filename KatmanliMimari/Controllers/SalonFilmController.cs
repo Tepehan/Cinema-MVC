@@ -42,7 +42,7 @@ namespace KatmanliMimari.Controllers {
             return RedirectToAction("Index");
         }
         public ActionResult deleteSalonFilm(int id) {
-            var sf=sfm.getById(id);
+            var sf=sfm.getBySalonFilmId(id);
             sf.durum = false;
             sfm.update(sf);
             return RedirectToAction("Index");
@@ -50,7 +50,7 @@ namespace KatmanliMimari.Controllers {
         }
         [HttpGet]
         public ActionResult updateSalonFilm(int id) {
-            var sf=sfm.getById(id);
+            var sf=sfm.getBySalonFilmId(id);
             salonFilmModal.salonFilmModal = sf;
             salonFilmModal.salonModal = sm.list();
             salonFilmModal.filmModal = fm.ListBL();
