@@ -58,6 +58,14 @@
         @Html.ValidationMessageFor(x => x.destekledigiTeknolojiler)
     </div>
     <br />
+
+    @Html.Label("Seo Url")
+    <br />
+    @Html.TextBoxFor(x => x.seoUrl, new { @class = "form-control" })
+    <div id="seoUrl" class="validation-container">
+        @Html.ValidationMessageFor(x => x.seoUrl)
+    </div>
+
     @Html.Label("Bütçe")
     <br />
     @Html.TextBoxFor(x => x.butce, new { @class = "form-control" })
@@ -67,7 +75,7 @@
     <br />
     @Html.Label("Afiş Resmi")
     <br />
-    <input type="file"  name="afisUrl">
+    <input type="file" name="afisUrl">
     <div id="ozet" class="validation-container">
         @Html.ValidationMessageFor(x => x.afisUrl)
     </div>
