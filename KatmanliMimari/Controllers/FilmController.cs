@@ -46,7 +46,12 @@ namespace KatmanliMimari.Controllers
             var result=filmValidator.Validate(film);
             if (result.IsValid)
             {
-
+               Film sonuc= filmManagerBL.GetBySeoBl(film.seoUrl);
+                if (sonuc!=null )
+                {
+                    ViewBag.seo = "zaten kullanılıyor";
+                    return View();
+                }
                 filmManagerBL.AddBL(film);
                 return RedirectToAction("Index");
             }
