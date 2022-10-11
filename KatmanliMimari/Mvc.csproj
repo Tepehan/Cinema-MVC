@@ -4421,6 +4421,7 @@
     <Content Include="www\web\index\menustyle.css" />
     <Content Include="www\web\index\mjquery.js" />
     <Content Include="www\web\index\popper.min.js" />
+    <Content Include="www\web\index\slider\card\c11.jpg" />
     <Content Include="www\web\index\slider\s5.jpg" />
     <Content Include="www\web\index\slider\card\c1.jpg" />
     <Content Include="www\web\index\slider\card\c10.png" />
@@ -4474,8 +4475,6 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Film\Index.cshtml" />
-    <Content Include="Views\Film\List.cshtml" />
     <Content Include="Views\Shared\AdminLayout.cshtml" />
     <Content Include="Views\Film\AddFilm.cshtml" />
     <Content Include="Views\Film\updateFilm.cshtml" />
@@ -4529,6 +4528,7 @@
     <Content Include="Views\Menu\Index.cshtml" />
     <Content Include="Views\Menu\updateMenu.cshtml" />
     <Content Include="Views\BiletAl\GetById.cshtml" />
+    <Content Include="Views\Film\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
