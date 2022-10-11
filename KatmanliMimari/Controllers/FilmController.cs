@@ -20,18 +20,16 @@ namespace KatmanliMimari.Controllers
         TurFilmModal turFilmModal = new TurFilmModal();
         //Context context = new Context();
         
-        public ActionResult Index()
+        public ActionResult Index(int pageNumber = 1)
         {
-            return View();
-        }
-
-
-
-        public ActionResult List(int pageNumber = 1) {
             turFilmModal.filmModal = filmManagerBL.ListBL().ToPagedList(pageNumber, 20);
             turFilmModal.turModal = turManagerBL.ListBL();
             return View(turFilmModal);
         }
+
+
+
+   
 
         [HttpGet]
         public ActionResult AddFilm()
@@ -50,7 +48,7 @@ namespace KatmanliMimari.Controllers
             {
 
                 filmManagerBL.AddBL(film);
-                return RedirectToAction("List");
+                return RedirectToAction("Index");
             }
             else
             {
@@ -75,7 +73,7 @@ namespace KatmanliMimari.Controllers
         public ActionResult deleteFilm(int id) {
             var film = filmManagerBL.GetByIdBL(id);
             filmManagerBL.DeleteBL(film);
-            return RedirectToAction("List");
+            return RedirectToAction("Index");
         }
         [HttpGet]
         public ActionResult updateFilm(int id) {
@@ -87,10 +85,9 @@ namespace KatmanliMimari.Controllers
         public ActionResult updateFilm(Film film)
         {
 
-
             setTurViewBag();
             filmManagerBL.UpdateBL(film);
-            return RedirectToAction("List");
+            return RedirectToAction("Index");
            
         }
         public ActionResult searchByFilmName(String filmName) {
