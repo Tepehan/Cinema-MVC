@@ -17,7 +17,18 @@ namespace Entity.Concrete
 
         [StringLength(20)]
         public string soyad { get; set; }
-        public DateTime dogumTarih { get; set; }
+
+        [StringLength(20)]
+        public string sifre { get; set; }
+
+        [StringLength(2)]
+        public string gun { get; set; }
+
+        [StringLength(2)]
+        public string ay { get; set; }
+
+        [StringLength(4)]
+        public string yil { get; set; }
 
         [StringLength(30)]
         public string eMail { get; set; }
