@@ -151,12 +151,12 @@
     <Compile Include="Controllers\FilmCastKadroController.cs" />
     <Compile Include="Controllers\FilmController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\KayıtOlController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Controllers\SalonController.cs" />
     <Compile Include="Controllers\SalonFilmController.cs" />
     <Compile Include="Controllers\SliderController.cs" />
     <Compile Include="Controllers\TurController.cs" />
+    <Compile Include="Controllers\UyeOlController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -2384,6 +2384,8 @@
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="www\web\uyeol\index.html" />
+    <Content Include="www\web\uyeol\style.css" />
     <Content Include="www\web\bilet\bilet.html" />
     <Content Include="www\web\bilet\stil.css" />
     <Content Include="www\web\bilet_al2\index.html" />
@@ -4529,12 +4531,12 @@
     <Content Include="Views\Menu\updateMenu.cshtml" />
     <Content Include="Views\BiletAl\GetById.cshtml" />
     <Content Include="Views\Film\Index.cshtml" />
+    <Content Include="Views\UyeOl\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
     <Folder Include="Views\Default\" />
-    <Folder Include="Views\KayıtOl\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config">
