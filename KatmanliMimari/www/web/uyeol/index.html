@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Üye Ol!</title>
+</head>
+
+<body>
+    <!-- main div -->
+    <div>
+        <!-- header div -->
+        <div class="header row">
+            <h1>CGV Cinema Club'a Üye Ol</h1>
+        </div>
+        <!-- header div end -->
+
+        <!-- form div -->
+        <div class="formdiv container">
+
+            <div class="adSoyad row">
+                <div class="col-sm-6"><input class="form-control" id="nameInput" type="text" placeholder="Adın*"></div>
+                <div class="col-sm-6"><input class="form-control" id="surnameInput" type="text" placeholder="Soyadın*">
+                </div>
+            </div>
+            <div class="epostaTelefon row">
+                <div class="col-sm-6"><input class="form-control" id="epostaInput" type="text" placeholder="E-posta*">
+                </div>
+                <div class="col-sm-6"><input class="form-control" id="phoneInput" type="text"
+                        placeholder="Cep Telefonu*"></div>
+            </div>
+            <div class="dogumTarihCinsiyet row">
+
+                <div class="col-sm-6">
+                    <b>Doğum Tarihi:</b>
+                    <div class="row">
+                        <div class="col-sm-2 mt-2">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Gün</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                                <option value="25">25</option>
+                                <option value="26">26</option>
+                                <option value="27">27</option>
+                                <option value="28">28</option>
+                                <option value="29">29</option>
+                                <option value="30">30</option>
+                                <option value="31">31</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-4 mt-2">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Ay</option>
+                                <option value="01">Ocak</option>
+                                <option value="02">Şubat</option>
+                                <option value="03">Mart</option>
+                                <option value="04">Nisan</option>
+                                <option value="05">Mayıs</option>
+                                <option value="06">Haziran</option>
+                                <option value="07">Temmuz</option>
+                                <option value="08">Ağustos</option>
+                                <option value="09">Eylül</option>
+                                <option value="10">Ekim</option>
+                                <option value="11">Kasım</option>
+                                <option value="12">Aralık</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-2 mt-2">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Yıl</option>
+                                <option>2022</option>
+                                <option>2021</option>
+                                <option>2020</option>
+                                <option>1999</option>
+                                <option>1998</option>
+                                <option>1997</option>
+                                <option>1996</option>
+                                <option>1995</option>
+                                <option>1994</option>
+                                <option>1993</option>
+                                <option>1992</option>
+                                <option>1991</option>
+                                <option>1990</option>
+                                <option>1989</option>
+                                <option>1988</option>
+                                <option>1987</option>
+                                <option>1986</option>
+                                <option>1985</option>
+                                <option>1996</option>
+                                <option>1995</option>
+                                <option>1994</option>
+                                <option>1993</option>
+                                <option>1992</option>
+                                <option>1991</option>
+
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <b>Cinsiyet:</b>
+                    <div class="row ">
+                        <div class="col-sm-2 mt-2">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Kadın
+                            </label>
+                        </div>
+                        <div class="col-sm-2 mt-2">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+                                checked>
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                Erkek
+                            </label>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="sifreSifreTekrar row ">
+                <div class="col-sm-6">
+                    <input type="password" id="sifre" class="form-control" placeholder="Şifre*">
+                </div>
+                <div class="col-sm-6">
+                    <input type="password" id="sifreTekrar" class="form-control" placeholder="Şifre Tekrar*">
+                </div>
+            </div>
+            <div class="sifreSifreTekrar row ">
+                <div class="col-sm-9">
+                    <p>
+                        Mars Sinema Turizm ve Sportif Tesisler İşl. A.Ş’ ye verdiğim iletişim onay formundaki iletişim
+                        bilgilerimin kullanılarak, <br>
+                        tarafıma tanıtım, kampanya, promosyon, indirim, hediye, fırsat ve CGV Cinema Club etkinliklerine
+                        ilişkin bilgi vb. <br>
+                        içerikte ticari ileti gönderilmesine onay veriyorum.
+                    </p>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                SMS Almak İstiyorum.
+                            </label>
+                        </div>
+                        <div class="col-sm-3">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                E-posta Almak İstiyorum.
+                            </label>
+                        </div>
+                        <div class="mt-4">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Mars Sinema ve Sportif Tesisleri İşletmeciliği A.Ş’ye verdiğim tüm kişisel bilgilerimin
+                                6698 sayılı Kişisel Verilerin <br>
+                                Korunması Hakkındaki Kanunun kapsamı ve sınırları çerçevesinde kullanılmasına onay
+                                veriyorum.
+                            </label>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-sm-3 mt-5">
+                    <button type="button" class="btn btn-dark">CGV Cinema Club'a Üye Ol</button>
+                </div>
+            </div>
+            <div class="ssc row mt-4">
+
+                <div class="col-sm-9 mt-3">
+                    <h2>Sıkça Sorulan Sorular</h2>
+                    <p>Aklınıza takılan soruların yanıtlarını hızlıca bulabilirsiniz.</p>
+                </div>
+                <div class="col-sm-3 incele">
+                    <button type="button" class="btn btn-dark">İncele</button>
+
+                </div>
+
+
+            </div>
+            <!-- form div end -->
+
+
+        </div>
+    </div>
+    <!-- main div end -->
+</body>
+
+</html>
