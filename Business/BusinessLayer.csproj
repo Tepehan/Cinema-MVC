@@ -66,6 +66,7 @@
     <Compile Include="Abstract\IFilmCastKadroService.cs" />
     <Compile Include="Abstract\IFilmService.cs" />
     <Compile Include="Abstract\IMenuService.cs" />
+    <Compile Include="Abstract\IMusteriService.cs" />
     <Compile Include="Abstract\ISalonFilmService.cs" />
     <Compile Include="Abstract\ISalonService.cs" />
     <Compile Include="Abstract\ISliderService.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="Concrete\FilmCastKadroManager.cs" />
     <Compile Include="Concrete\FilmManagerBL.cs" />
     <Compile Include="Concrete\MenuManager.cs" />
+    <Compile Include="Concrete\MusteriManager.cs" />
     <Compile Include="Concrete\SalonFilmManager.cs" />
     <Compile Include="Concrete\SalonManager.cs" />
     <Compile Include="Concrete\SliderManager.cs" />
