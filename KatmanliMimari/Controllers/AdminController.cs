@@ -20,7 +20,10 @@ namespace KatmanliMimari.Controllers
             return View();
         }
         [HttpGet]
-        public ActionResult login() { return View(); }
+        public ActionResult login() 
+        {
+            return View(); 
+        }
         [HttpPost]
         public ActionResult login(Admin admin) {
 
