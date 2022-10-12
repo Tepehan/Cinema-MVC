@@ -1,0 +1,93 @@
+.header{
+    background-color: #e6007e;
+    color:whitesmoke;
+    height: 70px;
+    padding-top:10px;
+    width: 2500px;
+}
+h1{
+    margin-left: 200px;
+    font-size: 30px;
+    font-weight: normal;
+   
+    
+}
+@media screen and (max-width: 912px){
+h1{
+    font-size: 22px;
+    padding-left: 100px;
+    margin-left: 50px;
+    padding-top: 5px;
+}
+#nameInput{
+    margin-bottom: 15px;
+}
+#epostaInput{
+    margin-bottom: 15px;
+}
+#sifre{
+    margin-bottom: 15px;
+}
+}
+
+.formdiv{
+    border-bottom: solid #e6e6e6;;
+  
+}
+.adSoyad{
+    margin-top: 30px;
+    margin-bottom: 15px;
+    outline: none;
+    border:none;
+}
+.epostaTelefon{
+    margin-bottom: 15px;
+
+}
+.dogumTarihCinsiyet{
+    margin-bottom: 15px;
+
+}
+.sifreSifreTekrar{
+    margin-bottom: 15px;
+}
+.form-control{
+    height: 50px;
+    background-color: #e6e6e6;
+    border-radius: 5px;
+}
+.form-control:focus {
+
+    box-shadow: none;
+    outline: none;
+    border: none;
+    background-color: #e6e6e6;
+}
+.form-check-input{
+    background-color:#e6e6e6;
+}
+.form-check-input:checked{
+    background-color:#e6007e;
+    box-shadow: none;
+    outline: none;
+    border: none;
+}
+.form-select:focus{
+    box-shadow: none;
+    outline: none;
+    border: none;
+}
+h2{
+    font-size: 30px;
+    color:inherit;
+    font-weight: normal;
+}
+.incele{
+    padding-left: 150px;
+    padding-top: 50px;
+}
+.ssc{
+    border-top: solid #e6e6e6;
+    margin-bottom: 40px;
+   
+}
