@@ -156,6 +156,10 @@
     <Compile Include="Migrations\202210120836000_sifre.designer.cs">
       <DependentUpon>202210120836000_sifre.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202210130741009_tarih.cs" />
+    <Compile Include="Migrations\202210130741009_tarih.designer.cs">
+      <DependentUpon>202210130741009_tarih.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -178,6 +182,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202210120836000_sifre.resx">
       <DependentUpon>202210120836000_sifre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210130741009_tarih.resx">
+      <DependentUpon>202210130741009_tarih.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
