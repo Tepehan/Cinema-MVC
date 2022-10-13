@@ -4531,7 +4531,7 @@
     <Content Include="Views\Menu\updateMenu.cshtml" />
     <Content Include="Views\BiletAl\GetById.cshtml" />
     <Content Include="Views\Film\Index.cshtml" />
-    <Content Include="Views\UyeOl\Index.cshtml" />
+    <Content Include="Views\UyeOl\UyeOl.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
