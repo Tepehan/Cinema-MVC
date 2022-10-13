@@ -18,12 +18,6 @@ namespace Business.Concrete
             _musteriDal = musteriDal;
         }
 
-        public MusteriManager(EfMusteriDal efMusteriDal)
-        {
-            EfMusteriDal = efMusteriDal;
-        }
-
-        public EfMusteriDal EfMusteriDal { get; }
 
         public void AddMusteri(Musteri musteri)
         {
