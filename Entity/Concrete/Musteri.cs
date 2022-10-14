@@ -21,9 +21,6 @@ namespace Entity.Concrete
         [StringLength(20)]
         public string sifre { get; set; }
 
-        [StringLength(20)]
-        public string sifreTekrar { get; set; }
-
         [StringLength(2)]
         public string gun { get; set; }
 
