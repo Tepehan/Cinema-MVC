@@ -57,6 +57,8 @@
                                     <th>sure</th>
                                     <th>destekledigiTeknolojiler</th>
                                     <th>durum</th>
+                                    <th>Gösterim Tarih</th>
+                                    <th>Gösterim Gün</th>
 
                                 </tr>
                                 @foreach (var item in Model)
@@ -70,6 +72,8 @@
                                             <td>@item.film.sure</td>
                                             <td>@item.film.destekledigiTeknolojiler</td>
                                             <td>@item.durum</td>
+                                            <td>@item.gosterimTarih</td>
+                                            <td>@item.gosterimGun</td>
                                             <td><a href="~/SalonFilm/updateSalonFilm/@item.salonFilmlerId" class="btn btn-primary text-white">Güncelle</a></td>
 
                                             <td><button type="button" class="btn btn-danger text-white" data-bs-whatever="@item.salonFilmlerId" data-bs-toggle="modal" data-bs-target="#silModal">Sil</button></td>
