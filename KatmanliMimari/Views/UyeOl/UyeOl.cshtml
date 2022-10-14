@@ -5,7 +5,6 @@
     Layout = "~/Views/Shared/NavbarLayout.cshtml";
 }
 
-<script src="~/Admin/javascript/JavaScript.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
@@ -14,6 +13,11 @@
 <title>Üye Ol!</title>
 <!-- main div -->
 
+<style>
+    .hide {
+        display: none;
+    }
+</style>
 
 <div>
 
@@ -42,7 +46,7 @@
                         @Html.ValidationMessageFor(x => x.soyad)
                     </div>
                 </div>
-                
+
             </div>
             <div class="epostaTelefon row">
                 <div class="col-sm-6">
@@ -52,7 +56,7 @@
                     </div>
                 </div>
 
-               
+
                 <div class="col-sm-6">
                     <input name="telefonNumara" class="form-control" id="phoneInput" type="text"
                            placeholder="Cep Telefonu*">
@@ -60,7 +64,7 @@
                         @Html.ValidationMessageFor(x => x.telefonNumara)
                     </div>
                 </div>
-                
+
             </div>
             <div class="dogumTarihCinsiyet row">
 
@@ -174,15 +178,18 @@
             </div>
             <div class="sifreSifreTekrar row ">
                 <div class="col-sm-6">
-                    <input name="sifre" type="password" id="sifre" class="form-control" placeholder="Şifre*" onblur="formkontrol()">
+                    <input name="sifre" type="password" id="sifre" class="form-control" placeholder="Şifre*">
                     <div id="sifre" class="validation-container">
                         @Html.ValidationMessageFor(x => x.sifre)
                     </div>
                 </div>
-               
+
                 <div class="col-sm-6">
-                    <input type="password" name="sifreTekrar" id="sifreTekrar" class="form-control" placeholder="Şifre Tekrar*">
+                    <input type="password" name="sifreTekrar" id="sifreTekrar" class="form-control" placeholder="Şifre Tekrar*" onblur="comparePassword(event)">
                 </div>
+
+                <span class="hide success">İki parolada aynı.</span>
+                <span class="hide error">Parola doğrulama alanı parola alanıyla aynı olmak zorunda.</span>
             </div>
             <div class="sifreSifreTekrar row ">
                 <div class="col-sm-9">
@@ -219,7 +226,7 @@
                     </div>
                 </div>
                 <div class="col-sm-3 mt-5">
-                    <button type="submit" class="btn btn-dark">CGV Cinema Club'a Üye Ol</button>
+                    <button type="submit" class="btn btn-dark uyeOl" disabled>CGV Cinema Club'a Üye Ol</button>
                 </div>
             </div>
             <div class="ssc row mt-4">
@@ -240,44 +247,27 @@
     </form>
 </div>
 <!-- main div end -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
 <script type="text/javascript">
 
-    function formkontrol() {
 
-        sifre = document.getElementById('sifre').value;
-        sifreTekrar = document.getElementById('tsifre').value;
+    $(function () {
 
-        var hata = new Array();
-        var sembol = '*|,:<>[]{}`;()&$#%!+-"/';
-
-        var sembolvar = false;
-        for (var i = 0; i < sifre.length; i++) {
-            if (sembol.indexOf(sifre.charAt(i)) != -1) {
-                sembolvar = true;
+        $('input[name=sifreTekrar]').on('keyup', function () {
+            var pwd = $('input[name=sifre]').val();
+            var confirm_pwd = $(this).val();
+            $('span.success').hide();
+            $('span.error').hide();
+            if (pwd == confirm_pwd) {
+                $('span.success').show();
+                $(".uyeOl").prop('disabled', false);
             }
-        }
-        if (sifre != tsifre)
-            hata.push('Şifreler aynı olmalıdır.');
-        else if (sifre.search(/[a-z]/) < 0)
-            hata.push("Şifre en az bir Küçük harf içermelidir.");
+            else {
+                $('span.error').show();
+                
+            }
 
-        else if (sifre.search(/[A-Z]/) < 0)
-            hata.push("Şifre en az bir Büyük harf içermelidir.");
+        });
 
-        else if (sifre.search(/[0-9]/) < 0)
-            hata.push("Şifre en az bir rakam içermelidir.");
-
-        else if (sembolvar == false)
-            hata.push("Şifre en az bir sembol içermelidir.");
-
-
-    }
-
-    if (hata.length > 0) {
-        alert(hata.join("\n"));
-        return false;
-    }
-    else return true; //buraya return true diyebiliriz
-
-        }
-</script>
+    });
+ </script>
