@@ -32,9 +32,10 @@ namespace KatmanliMimari.Controllers
                 FormsAuthentication.SetAuthCookie(sonuc.ad, false);
                 //intiating the session with needed values
 
-                Session["musteriAd"] = sonuc.ad;
-                Session["musteriSoyad"] = sonuc.soyad;
+                //Session["musteriAd"] = sonuc.ad;
+                //Session["musteriSoyad"] = sonuc.soyad;
                 
+                //yorum satırı yapıldı.
 
                 return RedirectToAction("Index", "Home");
             }
