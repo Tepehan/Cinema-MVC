@@ -34,6 +34,11 @@ namespace Business.Concrete
             return _musteriDal.List();
         }
 
+        public Musteri GetBy(string userName, string password)
+        {
+            return _musteriDal.GetBy(x => x.ad == userName && x.sifre == password);
+        }
+
         public void UpdateMusteri(Musteri musteri)
         {
             _musteriDal.Update(musteri);
