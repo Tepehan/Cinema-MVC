@@ -13,6 +13,7 @@ namespace Business.Abstract
         void UpdateMusteri(Musteri musteri);
         void DeleteMusteri(Musteri musteri);
         List<Musteri> Get();
+        Musteri GetBy(string userName, string password);
 
     }
 }
