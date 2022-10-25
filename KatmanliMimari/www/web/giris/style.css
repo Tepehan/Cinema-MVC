@@ -3,7 +3,6 @@
     height:100px;
 
 }
-
 .yazi{
     position: absolute;
     top: 100px;
@@ -32,7 +31,7 @@
     color: white;
     transition: 0.2s;
 }
-.img{
+resim{
     max-width: 100%;
     display: block;
     height: auto;
@@ -100,6 +99,16 @@
     background-color: #e6007e;
     color: white;
 }
+.buton4 {
+    margin-top: 20px;
+    height: 50px;
+    width: 220px;
+    border: white solid 1px;
+    outline: none;
+    border-radius: 5px;
+    background-color: #e6007e;
+    color: white;
+}
 
 .uyegiris{
     font-size: 28px;
@@ -121,7 +130,12 @@ p{
     font-size: 12px;
     padding-top: 10px;
 }
-.buton2:hover{
+.buton2:hover {
+    background-color: white;
+    color: black;
+    transition: 0.2s;
+}
+ .buton4:hover{
     background-color: white;
     color: black;
     transition: 0.2s;
@@ -130,7 +144,7 @@ p{
     width: 20%;
     height: 200px;
 }
-@media screen and (max-width: 711px)
+@media screen and (max-width: 912px)
 {
    .title{
     font-size: 22px;
@@ -142,12 +156,12 @@ p{
    .text{
     font-size: 16px;
    }
-   img{
+   resim{
     height:210px;
    } 
    .kesfetSoru{
     position: relative;
-    top: 0px;
+    top: 10px;
     margin-left: 10px;
    }
     .bosluk{
@@ -160,6 +174,23 @@ p{
     .login{
         margin-top: 10px;
     }
+    .yazi {
+        position: absolute;
+        top: 90px;
+        width: 100%;
+    }
+    .anadiv{
+        top:0;
+
+    }
+    .buton2{
+        margin-top:80px;
+    }
+    .buton4 {
+        margin-bottom: 20px;
+    }
+    
+
 }
 
 .pembe{
