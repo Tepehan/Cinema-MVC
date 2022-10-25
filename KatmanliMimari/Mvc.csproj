@@ -150,6 +150,7 @@
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\FilmCastKadroController.cs" />
     <Compile Include="Controllers\FilmController.cs" />
+    <Compile Include="Controllers\GirisController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Controllers\SalonController.cs" />
@@ -4535,6 +4536,7 @@
     <Content Include="Views\BiletAl\GetById.cshtml" />
     <Content Include="Views\Film\Index.cshtml" />
     <Content Include="Views\UyeOl\UyeOl.cshtml" />
+    <Content Include="Views\Giris\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
